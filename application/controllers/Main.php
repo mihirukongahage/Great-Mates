@@ -15,15 +15,11 @@ class Main extends CI_Controller {
     }
 
     public function index(){
-
         //$this->load->view('login');
-
     }
 
     public function login(){
-
         $this->load->view('login');
-
     }
 
     /*
@@ -47,73 +43,6 @@ class Main extends CI_Controller {
         $this->load->view('monthly_records');
 
     }
-
-    /*
-    Cattle
-    */
-    public function cattle(){
-
-        $p["username"] = $this->session->userdata('username');
-        $this->load->view('navbar',$p);
-        $this->load->view('cattle');
-
-    }
-
-    /*
-    Poultry
-    */
-    public function poultry(){
-
-        $p["username"] = $this->session->userdata('username');
-        $this->load->view('navbar',$p);
-        $this->load->view('poultry');
-
-    }
-
-    /*
-    Piggery
-    */
-    public function piggery(){
-
-        $p["username"] = $this->session->userdata('username');
-        $this->load->view('navbar',$p);
-        $this->load->view('piggery');
-
-    }
-
-    /*
-    goat
-    */
-    public function goat(){
-
-        $p["username"] = $this->session->userdata('username');
-        $this->load->view('navbar',$p);
-        $this->load->view('goat');
-
-    }
-
-    /*
-    monthly reports
-    */
-    public function monthly_reports(){
-
-        $p["username"] = $this->session->userdata('username');
-        $this->load->view('navbar',$p);
-        $this->load->view('monthly_reports');
-
-    }
-
-    /*
-    annual reports
-    */
-    public function annual_reports(){
-
-        $p["username"] = $this->session->userdata('username');
-        $this->load->view('navbar',$p);
-        $this->load->view('annual_reports');
-
-    }
-
 
     /*
     Login form validation and authentication 

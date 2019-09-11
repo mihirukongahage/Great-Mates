@@ -1,60 +1,78 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php include('partials/header.php')?>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.src.js"></script>
-
-  </head>
-  <body>
+<!--specific css for this file-->
+<link rel="stylesheet" href="<?php echo base_url('assets/css/newFarm.css');?>">
     
     <div class="container">
+
         <h1>New Farm</h1>
         <h5 class="card-subtitle mb-2 text-muted">Enter Farm Details</h5>
             <div class="mt-5">
                                 <form method="post" action="<?php echo base_url(); ?>index.php/main/signup_validate">
                                     <div class="form-group">
-                                        <label for="Form_reg_no">Form Registration Number</label>
-                                        <input type="text" name="form_reg_no" class="form-control" id="form_reg_no" placeholder="Form Registration Number">
-                                        <!-- <span class="text-danger"><?php echo form_error('form_reg_no'); ?></span> -->
+                                        <label class="labelAlignment">Form Registration Number</label>
+                                        
+                                        <div class="textBoxAlignment">
+                                            <input type="text" name="form_reg_no" class="form-control" id="form_reg_no" placeholder="Form Registration Number">
+                                                 <!-- <span class="text-danger"><?php echo form_error('form_reg_no'); ?></span> -->
+                                            </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="Qwner_name">Owner Name</label>
-                                        <input type="text" name="owner_name" class="form-control" id="owner_name" placeholder="Owner Name">
+                                         <label class="labelAlignment">Owner Name</label>
+                                        <div class="textBoxAlignment">
+                                            <input type="text" name="owner_name" class="form-control" id="owner_name" placeholder="Owner Name">
                                         <!-- <span class="text-danger"><?php echo form_error('owner_name'); ?></span> -->
+                                            </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="Contact_no">Contact Number</label>
-                                        <input type="number" name="contact_no" class="form-control" id="contact_no" placeholder="Contact Number">
+                                        <label class="labelAlignment">Contact Number</label>
+                                        <div class="textBoxAlignment">
+                                            <input type="number" name="contact_no" class="form-control" id="contact_no" placeholder="Contact Number">
                                         <!-- <span class="text-danger"><?php echo form_error('contact_no'); ?></span> -->
+                                            </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="Address">Address</label>
-                                        <input type="text" name="address" class="form-control" id="address" placeholder="Address">
-                                        <!-- <span class="text-danger"><?php echo form_error('address'); ?></span> -->
+                                        <label class="labelAlignment">Address</label>
+                                        <div class="textBoxAlignment">
+                                            <input type="text" name="address" class="form-control" id="address" placeholder="Address">
+                                            <!-- <span class="text-danger"><?php echo form_error('address'); ?></span> -->
+                                        </div>
                                     </div>
+
+                                    <div class="checkBoxContainer">
+                                        <label class="stockType">Live Stock type :</label>
+                                        <div class="form-group">
+                                            <input type="checkbox" name="poultry" class="form-control checkBoxes"  id="cattle"><label class="textSpacing">Cattle</label> <br>
+                                            <input type="checkbox" name="poultry" class="form-control checkBoxes" id="poultry"><label class="textSpacing">Poultry</label><br>
+                                            <input type="checkbox" name="piggery" class="form-control checkBoxes" id="piggery"><label class="textSpacing">Piggery</label><br>
+                                            <input type="checkbox" name="goat"    class="form-control checkBoxes"    id="goat"><label class="textSpacing">Goat</label>   <br>
+                                        </div>
+                                    </div>
+
                                     <div class="form-group">
-                                        <label for="Address">Live Stock</label>
-                                        <input type="checkbox" name="address" class="form-control" id="address">Cattle
-                                        <input type="checkbox" name="address" class="form-control" id="address">Poultry
-                                        <input type="checkbox" name="address" class="form-control" id="address">Piggery
-                                        <input type="checkbox" name="address" class="form-control" id="address">Goat
+  
+                                                    
+                                                    <button type="submit" name="insert" class="btn btn-primary setLocationButton" name="save">Set Location</button>
+                                                
+                                                    <div class="addClearButtonContainer">
+                                                        <div class="text-center">
+                                                        <div class="addButton"> <button type="submit" name="insert" class="btn btn-primary " name="save">Add</button> </div>
+                                                        <div class="clearButton"> <button type="reset" name="insert" class="btn btn-primary " name="clear">Clear</button> </div>
+                                                            <?php
+                                                                echo $this->session->flashdata("error"); 
+                                                            ?>
+                                                      
+                                                  
+                                                
+                                                </div>
+                                            </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="Location">Select Location</label>
-                                        <button type="submit" name="insert" class="btn btn-primary" name="save">Set Location</button>
+ 
+                                     
+                                        
+                                        
                                     </div>
-                                    <div class="text-center">
-                                    <button type="submit" name="insert" class="btn btn-primary" name="save">Add</button>
-                                    <?php
-                                        echo $this->session->flashdata("error"); 
-                                    ?>
-                                    </div>
+                                   
                                 </form>
             </div>
     </div>
