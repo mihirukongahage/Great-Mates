@@ -92,6 +92,27 @@ class Main extends CI_Controller {
 
     }
 
+    /*
+    monthly reports
+    */
+    public function monthly_reports(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('monthly_reports');
+
+    }
+
+    /*
+    annual reports
+    */
+    public function annual_reports(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('annual_reports');
+
+    }
 
 
     /*

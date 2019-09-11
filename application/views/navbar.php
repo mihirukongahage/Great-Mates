@@ -7,42 +7,20 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000080;">
-        <a class="navbar-brand" href="#"><h4>Great Mates</h4></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="<?=base_url('index.php/main/dashboard')?>">Dashboard <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="<?=base_url('index.php/main/new_farm')?>">New Farm <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="<?=base_url('index.php/main/monthly_records')?>">Monthly Records <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?=base_url('index.php/main/reservation')?>">Reservation</a>
-                </li>
-                
-            </ul>
-            <ul class="navbar-nav ml-lg-auto">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo $username ?></a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="<?=base_url('index.php/main/profile')?>">Profile</a>
-            <a class="dropdown-item" href="<?=base_url('index.php/main/logout')?>">Logout</a>
+    <div class="wrapper">
+          <div class="w3-sidebar w3-bar-block" style="width:25%">
+            <a class="nav-link" href="<?=base_url('index.php/main/dashboard')?>">Dashboard <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?=base_url('index.php/main/new_farm')?>">New Farm <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?=base_url('index.php/main/monthly_records')?>">Monthly Records <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?=base_url('index.php/main/monthly_reports')?>">Monthly Report <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="<?=base_url('index.php/main/annual_reports')?>">Monthly Records <span class="sr-only">(current)</span></a>
           </div>
-        </li>
-      </ul>
-        </div>
-    </nav>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
