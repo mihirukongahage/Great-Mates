@@ -14,38 +14,47 @@
   <body>
     
     <div class="container">
-      <h1>Divisional Veterinary Office</h1>
-      <h4 class="card-subtitle mb-2 text-muted">Field Operation Management System</h4>
+      <h1>Monthly Records</h1>
+      <h4 class="card-subtitle mb-2 text-muted"></h4>
 
-    <div class="row">
-    <?php 
-      if($services->num_rows()>0)
-      {
-        foreach($services->result() as $row)
-        {
-          ?>
-          <!-- Card to dispaly the service -->
-          <div class="offset-1 mt-3">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h5 class="card-title"> <?php echo $row->name; ?> </h5>
-                <h6 class="card-subtitle mb-2 text-muted">Rs.<?php echo $row->price; ?>.00</h6>
-                <p class="card-text"><?php echo $row->description; ?></p>
-                <!-- Edit and remove buttons -->
-                <a class="btn btn-primary" href="edit_service/?id=<?php echo $row->id; ?>">Edit</a>
-                <a class="btn btn-secondary" href="remove_service/?id=<?php echo $row->id; ?>" id="<?php echo $row->id; ?>">Remove</a>
-              </div>
+        <div class="container mt-5">
+            <div class="row">
+                <a class="offset-md-1" href="<?=base_url('index.php/main/logout')?>">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../../assets/img/cattle.jpg" class="card-img-top" alt="cattle" height="175">
+                        <div class="card-body">
+                            <h2 class="card-text">Cattle</h2>
+                        </div>
+                    </div>
+                </a>
+                <a class="offset-md-1" href="<?=base_url('index.php/main/logout')?>">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../../assets/img/poultry.jpeg" class="card-img-top" alt="poultry" height="175">
+                        <div class="card-body">
+                            <h2 class="card-text">Poultry</h2>
+                        </div>
+                    </div>
+                </a>
+                <a class="offset-md-1" href="<?=base_url('index.php/main/logout')?>">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../../assets/img/piggery.jpg" class="card-img-top" alt="piggery" height="175">
+                        <div class="card-body">
+                            <h2 class="card-text">Piggery</h2>
+                        </div>
+                    </div>
+                </a>
+                <a class="offset-md-1" href="<?=base_url('index.php/main/logout')?>">
+                    <div class="card" style="width: 18rem;">
+                        <img src="../../assets/img/goat.jpg" class="card-img-top" alt="goat" height="175">
+                        <div class="card-body">
+                            <h2 class="card-text">Goat</h2>
+                        </div>
+                    </div>
+                </a>
             </div>
-          </div>    
-    <?php }
-      }
-      else
-      {
-        //When no services are available
-        echo "No Services Available";
-      }
-    ?>
-</div>
+        </div>
+
+   
 </div>
 
     <!-- Optional JavaScript -->
