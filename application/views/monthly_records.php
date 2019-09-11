@@ -19,7 +19,7 @@
 
         <div class="container mt-5">
             <div class="row">
-                <a class="offset-md-1" href="<?=base_url('index.php/main/logout')?>">
+                <a class="offset-md-1" href="<?=base_url('index.php/main/cattle')?>">
                     <div class="card" style="width: 18rem;">
                         <img src="../../assets/img/cattle.jpg" class="card-img-top" alt="cattle" height="175">
                         <div class="card-body">
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="offset-md-1" href="<?=base_url('index.php/main/logout')?>">
+                <a class="offset-md-1" href="<?=base_url('index.php/main/poultry')?>">
                     <div class="card" style="width: 18rem;">
                         <img src="../../assets/img/poultry.jpeg" class="card-img-top" alt="poultry" height="175">
                         <div class="card-body">
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="offset-md-1" href="<?=base_url('index.php/main/logout')?>">
+                <a class="offset-md-1" href="<?=base_url('index.php/main/piggery')?>">
                     <div class="card" style="width: 18rem;">
                         <img src="../../assets/img/piggery.jpg" class="card-img-top" alt="piggery" height="175">
                         <div class="card-body">
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="offset-md-1" href="<?=base_url('index.php/main/logout')?>">
+                <a class="offset-md-1" href="<?=base_url('index.php/main/goat')?>">
                     <div class="card" style="width: 18rem;">
                         <img src="../../assets/img/goat.jpg" class="card-img-top" alt="goat" height="175">
                         <div class="card-body">

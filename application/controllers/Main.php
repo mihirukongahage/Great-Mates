@@ -49,6 +49,52 @@ class Main extends CI_Controller {
     }
 
     /*
+    Cattle
+    */
+    public function cattle(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('cattle');
+
+    }
+
+    /*
+    Poultry
+    */
+    public function poultry(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('poultry');
+
+    }
+
+    /*
+    Piggery
+    */
+    public function piggery(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('piggery');
+
+    }
+
+    /*
+    goat
+    */
+    public function goat(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('goat');
+
+    }
+
+
+
+    /*
     Login form validation and authentication 
     */
     public function login_validation(){
