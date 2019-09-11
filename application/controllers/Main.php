@@ -25,10 +25,31 @@ class Main extends CI_Controller {
         $this->load->view('login');
 
     }
+
     /*
+    New Farm
+    */
+    public function new_farm(){
 
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('new_farm');
+
+    }
+
+    /*
+    Monthly Records
+    */
+    public function monthly_records(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('monthly_records');
+
+    }
+
+    /*
     Login form validation and authentication 
-
     */
     public function login_validation(){
 
@@ -99,7 +120,6 @@ class Main extends CI_Controller {
     Logout
 
     */
-
     public function logout(){
 
         $this->session->unset_userdata('username');

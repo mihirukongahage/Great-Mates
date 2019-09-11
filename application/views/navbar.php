@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   </head>
+
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000080;">
-        <a class="navbar-brand" href="#"><h4>CruiserR</h4></a>
+        <a class="navbar-brand" href="#"><h4>Great Mates</h4></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -20,9 +21,16 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="<?=base_url('index.php/main/dashboard')?>">Dashboard <span class="sr-only">(current)</span></a>
                 </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="<?=base_url('index.php/main/new_farm')?>">New Farm <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="<?=base_url('index.php/main/monthly_records')?>">Monthly Records <span class="sr-only">(current)</span></a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="<?=base_url('index.php/main/reservation')?>">Reservation</a>
                 </li>
+                
             </ul>
             <ul class="navbar-nav ml-lg-auto">
         <li class="nav-item dropdown">

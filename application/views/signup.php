@@ -13,60 +13,63 @@
   <body>
 
     <div class="row mt-5">
-    <div class="col col-sm-12 col-md-6 col-lg-4 offset-md-3 offset-lg-4">
-        <div class="card login-card" style="width: 25rem"">
+    <div class="col col-sm-12 col-md-6 col-lg-4 offset-md-2 offset-lg-3">
+        <div class="card login-card" style="width: 50rem"">
+        
         <div class="card-body">
-            <h3 class="card-title">SignUp</h3>
-            <h6 class="card-subtitle mb-2 text-muted">Enter your details</h6>
-        </div>
-        <div class="card-body">
+                    <div class="row">
 
-            <!--Form-->
-            <form method="post" action="<?php echo base_url(); ?>index.php/main/signup_validate">
-            <div class="form-group">
-                <label for="Firstname">Firstname</label>
-                <input type="text" name="firstname" class="form-control" id="firstname" placeholder="Enter Firstname">
-                <!-- <span class="text-danger"><?php echo form_error('username'); ?></span> -->
-            </div>
-            <div class="form-group">
-                <label for="Lastname">Lastname</label>
-                <input type="text" name="lastname" class="form-control" id="lastname" placeholder="Enter Lastname">
-                <!-- <span class="text-danger"><?php echo form_error('lastname'); ?></span> -->
-            </div>
-            <div class="form-group">
-                <label for="Username">Username</label>
-                <input type="text" name="username" class="form-control" id="username" placeholder="Enter username">
-                <!-- <span class="text-danger"><?php echo form_error('username'); ?></span> -->
-            </div>
-            <div class="form-group">
-                <label for="Email">Email</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="Enter Email">
-                <!-- <span class="text-danger"><?php echo form_error('email'); ?></span> -->
-            </div>
-            <div class="form-group">
-                <label for="Password">Password</label>
-                <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password">
-                <!-- <span class="text-danger"><?php echo form_error('lastname'); ?></span> -->
-            </div>
-            <div class="form-group">
-                <label for="CPassword">Confirm Password</label>
-                <input type="password" name="cpassword" class="form-control" id="cpassword" placeholder="Confirm Password">
-                <!-- <span class="text-danger"><?php echo form_error('cpassword'); ?></span> -->
-            </div>
-            <div class="text-center">
-            <button type="submit" name="insert" class="btn btn-primary" name="save">SignUp</button>
-            <?php
-                echo $this->session->flashdata("error"); 
-             ?>
-            </form>
-            </div>
-            <!--/Form-->
-        </div>
-        <div class="card-body">
-            <div class="text-center">
-                <a class="card-link" href="<?=base_url('')?>">I have an account</a>
-            </div>
-        </div>
+                        <div class="left col-md-5 col-lg-3">
+                            <h2>Logo</h1>
+                            <p>Description</P>
+
+                        </div>
+
+                        <div class="right col-md-8 col-lg-5 offset-md-3">
+                            <h3 class="card-title">SignUp</h3>
+                            <h6 class="card-subtitle mb-2 text-muted">Enter your details</h6>
+
+                            <div class="mt-5">
+                                <form method="post" action="<?php echo base_url(); ?>index.php/main/signup_validate">
+                                    <div class="form-group">
+                                        <label for="Name">Name</label>
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Name">
+                                        <!-- <span class="text-danger"><?php echo form_error('name'); ?></span> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Office_id">Office ID Number</label>
+                                        <input type="text" name="office_id" class="form-control" id="office_id" placeholder="Office ID Number">
+                                        <!-- <span class="text-danger"><?php echo form_error('office_id'); ?></span> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Password">Password</label>
+                                        <input type="text" name="password" class="form-control" id="password" placeholder="Enter Password">
+                                        <!-- <span class="text-danger"><?php echo form_error('password'); ?></span> -->
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="CPassword">Confirm Password</label>
+                                        <input type="password" name="cpassword" class="form-control" id="cpassword" placeholder="Confirm Password">
+                                        <!-- <span class="text-danger"><?php echo form_error('cpassword'); ?></span> -->
+                                    </div>
+                                    <div class="text-center">
+                                    <button type="submit" name="insert" class="btn btn-primary" name="save">Create</button>
+                                    <?php
+                                        echo $this->session->flashdata("error"); 
+                                    ?>
+                                </form>
+                            </div>
+
+                            <div class="mt-5">
+                                <div class="">
+                                    <!-- Direct to signup -->
+                                    <h6>Have an account?</h6>
+                                    <a class="btn btn-primary" href="<?=base_url('index.php/main/login')?>">Log In</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
         </div>
     </div>
     </div>
