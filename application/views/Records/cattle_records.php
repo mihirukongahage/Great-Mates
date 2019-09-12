@@ -1,4 +1,4 @@
-<!doctype html>
+    <!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -9,22 +9,39 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
-    
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+
+    <style>
+    .card-body{
+      background-color: #DAAF8D;
+    }
+
+    body{
+      background-color: 	#C8DFD9;
+    }
+
+    .card-body{
+      color: 	#0b2829;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
+
   </head>
   <body>
-    
-    <div class="container">
-        <h1>Monthly Records</h1>
-        <h5 class="card-subtitle mb-2 text-muted">Details related to cattle</h5>
-            <div class="mt-5">
-                                <form method="post" action="<?php echo base_url(); ?>index.php/main/signup_validate">
+    <div class="section offset-4 offset-sm-3 offset-md-3">
+      <h1>Monthly Records</h1>
+      <h4 class="card-subtitle mb-2 text-muted"></h4>
+
+        <div class="section">
+            <form method="post" action="<?php echo base_url(); ?>index.php/main/signup_validate">
                                     <div class="form-group">
                                         <label for="Farm_reg_no">Farm Registration Number</label>
-                                        <input type="text" name="farm_reg_no" class="form-control" id="farm_reg_no" placeholder="Farm Registration Number">
+                                        <input type="text" width="5" name="farm_reg_no" class="form-control" id="farm_reg_no" placeholder="Farm Registration Number">
                                         <!-- <span class="text-danger"><?php echo form_error('faarm_reg_no'); ?></span> -->
                                     </div>
                                     <div class="form-group">
@@ -70,8 +87,11 @@
                                     ?>
                                     </div>
                                 </form>
-            </div>
-    </div>
+        </div>
+        <div class="mt-5"></div>
+
+   
+</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
