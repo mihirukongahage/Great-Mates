@@ -3,7 +3,7 @@
 <!--specific css for this file-->
 <link rel="stylesheet" href="<?php echo base_url('assets/css/newFarm.css');?>">
     
-    <div class="container">
+    <div class="section offset-4 offset-sm-3 offset-md-3">
 
         <h1>New Farm</h1>
         <h5 class="card-subtitle mb-2 text-muted">Enter Farm Details</h5>

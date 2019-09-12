@@ -45,6 +45,39 @@ class Main extends CI_Controller {
     }
 
     /*
+    Monthly Reports
+    */
+    public function monthly_reports(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('monthly_reports');
+
+    }
+
+    /*
+    Monthly Records
+    */
+    public function annual_reports(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('annual_reports');
+
+    }
+
+    /*
+    Monthly Records
+    */
+    public function about(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('about');
+
+    }
+
+    /*
     Login form validation and authentication 
     */
     public function login_validation(){

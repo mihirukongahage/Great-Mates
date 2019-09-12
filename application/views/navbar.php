@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
         .w3-sidebar {
-            background-color: #0d0024;
+            background-color: #2A3634;
         }
         .greatmates {
-            color: green;
+            color: #FECA9C;
+        }
+        .nav-link {
+            color: #D5AF8B;
         }
 </style>
   </head>
@@ -29,6 +32,8 @@
                     <a class="nav-link" href="<?=base_url('index.php/main/dashboard')?>">Dashboard<span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?=base_url('index.php/main/new_farm')?>">New Farm <span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?=base_url('index.php/main/monthly_records')?>">Monthly Records <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?=base_url('index.php/main/monthly_reports')?>">Monthly Reports <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?=base_url('index.php/main/annual_reports')?>">Annual Reports <span class="sr-only">(current)</span></a>
                 </div>
             </div>
           </div>

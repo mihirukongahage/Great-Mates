@@ -1,6 +1,6 @@
 <?php include('partials/header.php')?>
 
-    <div class="container">
+    <div class="section offset-4 offset-sm-3 offset-md-3">
       <h1>Divisional Veterinary Office</h1>
       <h4 class="card-subtitle mb-2 text-muted">Field Operation Management System</h4>
 
