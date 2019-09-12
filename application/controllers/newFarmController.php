@@ -9,42 +9,35 @@
         }
         public function insert(){
             //creating stock type 
-            $stock = "";
+            $cattle = 0;
+            $poultry  = 0;
+            $piggery  = 0;
+            $goat     = 0;
+            
             if($this->input->post("cattle")=="on"){
-                    $stock = $stock."cattle";
+                 $cattle = 1;
             }
             if($this->input->post("poultry")=="on"){
-                if($stock==""){
-                    $stock = $stock."poultry";
-                }else{
-                    $stock = $stock." , poultry";
-                } 
+                $poultry  = 1;
             }
             if($this->input->post("piggery")=="on"){
-               if($stock==""){
-                    $stock = $stock."piggery";
-                }else{
-                    $stock = $stock." , piggery";
-                } 
+                $piggery  = 1;
             }
             if($this->input->post("goat")=="on"){
-                if($stock==""){
-                    $stock = $stock."goat";
-                }else{
-                    $stock = $stock." , goat";
-                } 
+                $goat  = 1;
             } 
                
             $data = array(    
                 'regNo'         => $this->input->post('form_reg_no'),
                 'Phone'         => $this->input->post('contact_no'),
                 'Address'       => $this->input->post('address'), 
-                'stockType'     => $stock ,
+                'cattle'   => $cattle ,
+                'poultry'  => $poultry,
+                'piggery'  => $piggery,
+                'goat'     => $goat   ,
                 'Name'          => $this->input->post('owner_name'), 
                 );   
                 $this->farmModel->insert($data);       
         }
     }
 ?>
-
- 
