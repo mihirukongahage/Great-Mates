@@ -25,7 +25,7 @@
 <!--specific css for this file-->
 <link rel="stylesheet" href="<?php echo base_url('assets/css/newFarm.css');?>">
     
-    <div class="section offset-6 offset-sm-4 offset-md-4 offset-lg-3 offset-xl-2">
+    <div class="section offset-6 offset-sm-4 offset-md-4 offset-lg-3 offset-xl-3">
         <h1 class="offset-1">New Farm</h1>
         <h5 class="card-subtitle mb-2 text-muted offset-1">Enter Farm Details</h5>
             <div class=" offset-1 mt-5">

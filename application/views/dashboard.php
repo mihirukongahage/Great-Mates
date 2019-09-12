@@ -12,13 +12,19 @@
 
     <style>
     .card-body{
-      background-color: 	#106466;
+      background-color: #DAAF8D;
     }
 
     body{
       background-color: 	#C8DFD9;
     }
+
+    .card-body{
+      color: 	#0b2829;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
 </style>
+
 
   </head>
   
@@ -27,7 +33,7 @@
 
 
 <div class="section offset-4 offset-sm-3 offset-md-3">
-  <div class="heading">
+  <div class="heading offset-lg-1">
     <h1 class="offset-1">Divisional Veterinary Office</h1>
     <h4 class="card-subtitle mb-2 text-muted offset-1">Field Operation Management System</h4>
   </div>
@@ -36,7 +42,7 @@
               <div class="cardContainer offset-1"> 
                 <a class="offset-1" href="<?=base_url('index.php/main/new_farm')?>">
                     <div class="card" style="width: 20rem;">
-                        <div class="card-body">
+                        <div class="card-body w3-hover-opacity">
                             <div class="text-center">
                                 <h2 class="card-text">New Farm</h2>
                                 <h6 class="card-subtitle mb-2 text-muted">Add a new farm</h6>
@@ -48,7 +54,7 @@
               <div class="cardContainer offset-1"> 
                 <a class="offset-1" href="<?=base_url('index.php/main/monthly_records')?>">
                     <div class="card" style="width: 20rem;">
-                        <div class="card-body">
+                        <div class="card-body w3-hover-opacity">
                             <div class="text-center">
                                 <h2 class="card-text">Monthly Records</h2>
                                 <h6 class="card-subtitle mb-2 text-muted">Monthly records</h6>
@@ -60,9 +66,9 @@
                 <div class="cardContainer offset-1"> 
                 <a class="offset-1" href="<?=base_url('index.php/main/monthly_reports')?>">
                     <div class="card" style="width: 20rem;">
-                        <div class="card-body">
+                        <div class="card-body w3-hover-opacity">
                             <div class="text-center">
-                                <h2 class="card-text">Piggery</h2>
+                                <h2 class="card-text">Monthly Reports</h2>
                                 <h6 class="card-subtitle mb-2 text-muted">Monthly report for piggery</h6>
                             </div>
                         </div>
@@ -70,12 +76,36 @@
                 </a>
                 </div>
                 <div class="cardContainer offset-1"> 
-                <a class="offset-1" href="<?=base_url('index.php/main/goat')?>">
+                <a class="offset-1" href="<?=base_url('index.php/main/annual_reports')?>">
                     <div class="card" style="width: 20rem;">
-                        <div class="card-body">
+                        <div class="card-body w3-hover-opacity">
                             <div class="text-center">
-                                <h2 class="card-text">Goat</h2>
+                                <h2 class="card-text">Annual Reports</h2>
                                 <h6 class="card-subtitle mb-2 text-muted">Monthly report for goat</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <div class="cardContainer offset-1"> 
+                <a class="offset-1" href="<?=base_url('index.php/main/about')?>">
+                    <div class="card" style="width: 20rem;">
+                        <div class="card-body w3-hover-opacity">
+                            <div class="text-center">
+                                <h2 class="card-text">About</h2>
+                                <h6 class="card-subtitle mb-2 text-muted">Details</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+                <div class="cardContainer offset-1"> 
+                <a class="offset-1" href="<?=base_url('index.php/main/farm_locations')?>">
+                    <div class="card" style="width: 20rem;">
+                        <div class="card-body w3-hover-opacity">
+                            <div class="text-center">
+                                <h2 class="card-text">Farm Locations</h2>
+                                <h6 class="card-subtitle mb-2 text-muted">Registered farm locations</h6>
                             </div>
                         </div>
                     </div>
