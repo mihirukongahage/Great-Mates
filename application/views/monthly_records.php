@@ -39,7 +39,7 @@
         <div class="section">
             <div class="row">
                 <div class="cardContainer offset-1 w3-hover-sepia"> 
-                    <a class="offset-md-1" href="<?=base_url('index.php/main/cattle')?>">
+                    <a class="offset-md-1" href="<?=base_url('index.php/main/cattle_records')?>">
                         <div class="card cardContaine" style="width: 18rem;">
                             <img src="../../assets/img/cattle.jpg" class="card-img-top" alt="cattle" height="175">
                             <div class="card-body">

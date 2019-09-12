@@ -67,7 +67,7 @@ class Main extends CI_Controller {
     }
 
     /*
-    Monthly Records
+    About
     */
     public function about(){
 
@@ -76,6 +76,62 @@ class Main extends CI_Controller {
         $this->load->view('about');
 
     }
+
+//////////////////  Records ///////////////////////////
+    /*
+    Cattle Records
+    */
+    public function cattle_records(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('Records/cattle_records');
+
+    }
+
+    /*
+    Poultry Records
+    */
+    public function poultry_records(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('poultry_records');
+
+    }
+
+    /*
+    Piggery Records
+    */
+    public function piggery_records(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('piggery_records');
+
+    }
+
+    /*
+    Goat Records
+    */
+    public function goat_records(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('goat_records');
+
+    }
+
+
+
+
+
+
+
+
+
+
+
 
     /*
     Login form validation and authentication 
