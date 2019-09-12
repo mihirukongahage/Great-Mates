@@ -20,6 +20,10 @@
   body{
     background-color: 	#C8DFD9;
   }
+
+  a:hover{
+    text-decoration: none;
+  }
 </style>
 
 <!--specific css for this file-->
@@ -29,7 +33,7 @@
         <h1 class="offset-1">New Farm</h1>
         <h5 class="card-subtitle mb-2 text-muted offset-1">Enter Farm Details</h5>
             <div class=" offset-1 mt-5">
-                                <form method="post" action="<?php echo base_url(); ?>index.php/main/signup_validate">
+                                <form method="post" action="<?php echo base_url('index.php/newFarmController/insert/'); ?>">
                                     <div class="form-group">
                                         <label class="labelAlignment">Form Registration Number</label>
                                         
