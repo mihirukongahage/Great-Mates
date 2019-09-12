@@ -1,13 +1,34 @@
-<?php include('partials/header.php')?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+
+  </head>
+  <body>
+<style>
+  .card-body{
+    background-color: 	#106466;
+  }
+
+  body{
+    background-color: 	#C8DFD9;
+  }
+</style>
 
 <!--specific css for this file-->
 <link rel="stylesheet" href="<?php echo base_url('assets/css/newFarm.css');?>">
     
-    <div class="section offset-4 offset-sm-3 offset-md-3">
-
-        <h1>New Farm</h1>
-        <h5 class="card-subtitle mb-2 text-muted">Enter Farm Details</h5>
-            <div class="mt-5">
+    <div class="section offset-6 offset-sm-4 offset-md-4 offset-lg-3 offset-xl-2">
+        <h1 class="offset-1">New Farm</h1>
+        <h5 class="card-subtitle mb-2 text-muted offset-1">Enter Farm Details</h5>
+            <div class=" offset-1 mt-5">
                                 <form method="post" action="<?php echo base_url(); ?>index.php/main/signup_validate">
                                     <div class="form-group">
                                         <label class="labelAlignment">Form Registration Number</label>
@@ -69,7 +90,6 @@
                                     </div>
  
                                      
-                                        
                                         
                                     </div>
                                    

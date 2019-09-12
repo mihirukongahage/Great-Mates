@@ -1,11 +1,71 @@
-<?php include('partials/header.php')?>
-
-    <div class="section offset-4 offset-sm-3 offset-md-3">
-      <h1>Divisional Veterinary Office</h1>
-      <h4 class="card-subtitle mb-2 text-muted">Field Operation Management System</h4>
-
+<link rel="stylesheet" href="<?php echo base_url('assets/css/monthlyReports.css');?>">
     
-</div>
+    <div class="section offset-4 offset-sm-3 offset-md-3">
+      <h1>Monthly Records</h1>
+      <h4 class="card-subtitle mb-2 text-muted"></h4>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="cardContainer"> 
+                    <a class="offset-md-1" href="<?=base_url('index.php/main/cattle')?>">
+                        <div class="card cardContaine" style="width: 18rem;">
+                            <img src="../../assets/img/cattle.jpg" class="card-img-top" alt="cattle" height="175">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    <h2 class="card-text">Cattle</h2>
+                                    <h6 class="card-subtitle mb-2 text-muted">Monthly records for cattle</h6>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </a>
+                </div>
+                <div class="cardContainer"> 
+                <a class="offset-md-1" href="<?=base_url('index.php/main/poultry')?>">
+                    <div class="card cardContaine" style="width: 18rem;">
+                        <img src="../../assets/img/poultry.jpeg" class="card-img-top" alt="poultry" height="175">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h2 class="card-text">Poultry</h2>
+                                <h6 class="card-subtitle mb-2 text-muted">Monthly records for poultry</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                </div>
+                <div class="cardContainer"> 
+                <a class="offset-md-1" href="<?=base_url('index.php/main/piggery')?>">
+                    <div class="card cardContaine" style="width: 18rem;">
+                        <img src="../../assets/img/piggery.jpg" class="card-img-top" alt="piggery" height="175">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h2 class="card-text">Piggery</h2>
+                                <h6 class="card-subtitle mb-2 text-muted">Monthly records for piggery</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                </div>
+                <div class="cardContainer"> 
+                <a class="offset-md-1" href="<?=base_url('index.php/main/goat')?>">
+                    <div class="card cardContaine" style="width: 18rem;">
+                        <img src="../../assets/img/goat.jpg" class="card-img-top" alt="goat" height="175">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h2 class="card-text">Goat</h2>
+                                <h6 class="card-subtitle mb-2 text-muted">Monthly records for goat</h6>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                </div>
+            </div>
+        </div>
+
+   
 </div>
 
     <!-- Optional JavaScript -->
@@ -15,6 +75,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-
-    <?php include('partials/footer.php')?>
+  
+  </body>
+</html>

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="<?php echo base_url('assets/css/monthlyReports.css');?>">
     
     <div class="section offset-4 offset-sm-3 offset-md-3">
-      <h1>Monthly Records</h1>
+      <h1>Monthly Reports</h1>
       <h4 class="card-subtitle mb-2 text-muted"></h4>
 
         <div class="container mt-5">
@@ -21,9 +21,6 @@
                     </a>
                 </div>
                 <div class="cardContainer"> 
-
-
-
                 <a class="offset-md-1" href="<?=base_url('index.php/main/poultry')?>">
                     <div class="card cardContaine" style="width: 18rem;">
                         <img src="../../assets/img/poultry.jpeg" class="card-img-top" alt="poultry" height="175">

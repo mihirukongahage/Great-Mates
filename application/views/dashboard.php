@@ -1,14 +1,41 @@
-<?php include('partials/header.php')?>
-    
-<div class="section offset-4 offset-sm-3 offset-md-3">
-  <h1>Divisional Veterinary Office</h1>
-  <h4 class="card-subtitle mb-2 text-muted">Field Operation Management System</h4>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+
+    <style>
+    .card-body{
+      background-color: 	#106466;
+    }
+
+    body{
+      background-color: 	#C8DFD9;
+    }
+</style>
+
+  </head>
+  
+  <body>
+    
+
+
+<div class="section offset-4 offset-sm-3 offset-md-3">
+  <div class="heading">
+    <h1 class="offset-1">Divisional Veterinary Office</h1>
+    <h4 class="card-subtitle mb-2 text-muted offset-1">Field Operation Management System</h4>
+  </div>
   <div class="container mt-5">
             <div class="row">
-                <a class="offset-md-1" href="<?=base_url('index.php/main/new_farm')?>">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../../assets/img/cattle.jpg" class="card-img-top" alt="cattle" height="175">
+              <div class="cardContainer offset-1"> 
+                <a class="offset-1" href="<?=base_url('index.php/main/new_farm')?>">
+                    <div class="card" style="width: 20rem;">
                         <div class="card-body">
                             <div class="text-center">
                                 <h2 class="card-text">New Farm</h2>
@@ -17,9 +44,10 @@
                         </div>
                     </div>
                 </a>
-                <a class="offset-md-1" href="<?=base_url('index.php/main/monthly_records')?>">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../../assets/img/poultry.jpeg" class="card-img-top" alt="poultry" height="175">
+              </div>
+              <div class="cardContainer offset-1"> 
+                <a class="offset-1" href="<?=base_url('index.php/main/monthly_records')?>">
+                    <div class="card" style="width: 20rem;">
                         <div class="card-body">
                             <div class="text-center">
                                 <h2 class="card-text">Monthly Records</h2>
@@ -28,9 +56,10 @@
                         </div>
                     </div>
                 </a>
-                <a class="offset-md-1" href="<?=base_url('index.php/main/monthly_reports')?>">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../../assets/img/piggery.jpg" class="card-img-top" alt="piggery" height="175">
+                </div>
+                <div class="cardContainer offset-1"> 
+                <a class="offset-1" href="<?=base_url('index.php/main/monthly_reports')?>">
+                    <div class="card" style="width: 20rem;">
                         <div class="card-body">
                             <div class="text-center">
                                 <h2 class="card-text">Piggery</h2>
@@ -39,9 +68,10 @@
                         </div>
                     </div>
                 </a>
-                <a class="offset-md-1" href="<?=base_url('index.php/main/goat')?>">
-                    <div class="card" style="width: 18rem;">
-                        <img src="../../assets/img/goat.jpg" class="card-img-top" alt="goat" height="175">
+                </div>
+                <div class="cardContainer offset-1"> 
+                <a class="offset-1" href="<?=base_url('index.php/main/goat')?>">
+                    <div class="card" style="width: 20rem;">
                         <div class="card-body">
                             <div class="text-center">
                                 <h2 class="card-text">Goat</h2>
@@ -50,6 +80,7 @@
                         </div>
                     </div>
                 </a>
+                </div>
             </div>
         </div>
     
@@ -63,4 +94,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   
-<?php include('partials/footer.php')?>
+</body>
+</html>
