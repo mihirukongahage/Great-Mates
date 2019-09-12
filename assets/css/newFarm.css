@@ -62,3 +62,8 @@
     top: -38px;
     left:150px;
 }
+
+.sidebarAlignment{
+    position: relative;
+    left:18%;
+}

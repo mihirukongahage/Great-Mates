@@ -2,13 +2,15 @@
 
 <!--specific css for this file-->
 <link rel="stylesheet" href="<?php echo base_url('assets/css/newFarm.css');?>">
-    
-    <div class="section offset-4 offset-sm-3 offset-md-3">
+<div class="sidebarAlignment">
 
+
+    <div class="section offset-4 offset-sm-3 offset-md-3">
+                                                                          
         <h1>New Farm</h1>
         <h5 class="card-subtitle mb-2 text-muted">Enter Farm Details</h5>
             <div class="mt-5">
-                                <form method="post" action="<?php echo base_url(); ?>index.php/main/signup_validate">
+                                <form action="<?php echo base_url('index.php/newFarmController/insert');?>" method="post" >
                                     <div class="form-group">
                                         <label class="labelAlignment">Form Registration Number</label>
                                         
@@ -42,10 +44,10 @@
                                     <div class="checkBoxContainer">
                                         <label class="stockType">Live Stock type :</label>
                                         <div class="form-group">
-                                            <input type="checkbox" name="poultry" class="form-control checkBoxes"  id="cattle"><label class="textSpacing">Cattle</label> <br>
-                                            <input type="checkbox" name="poultry" class="form-control checkBoxes" id="poultry"><label class="textSpacing">Poultry</label><br>
-                                            <input type="checkbox" name="piggery" class="form-control checkBoxes" id="piggery"><label class="textSpacing">Piggery</label><br>
-                                            <input type="checkbox" name="goat"    class="form-control checkBoxes"    id="goat"><label class="textSpacing">Goat</label>   <br>
+                                            <input type="checkbox" name="cattle"  class="form-control checkBoxes"  id="cattle"><label class="textSpacing">Cattle</label> <br>
+                                            <input type="checkbox" name="poultry" class="form-control checkBoxes"  id="poultry"><label class="textSpacing">Poultry</label><br>
+                                            <input type="checkbox" name="piggery" class="form-control checkBoxes"  id="piggery"><label class="textSpacing">Piggery</label><br>
+                                            <input type="checkbox" name="goat"    class="form-control checkBoxes"  id="goat"><label class="textSpacing">Goat</label>   <br>
                                         </div>
                                     </div>
 
@@ -56,8 +58,8 @@
                                                 
                                                     <div class="addClearButtonContainer">
                                                         <div class="text-center">
-                                                        <div class="addButton"> <button type="submit" name="insert" class="btn btn-primary " name="save">Add</button> </div>
-                                                        <div class="clearButton"> <button type="reset" name="insert" class="btn btn-primary " name="clear">Clear</button> </div>
+                                                        <div class="addButton"> <button type="submit"  class="btn btn-primary " >Add</button> </div>
+                                                        <div class="clearButton"> <button type="reset"   class="btn btn-primary "  >Clear</button> </div>
                                                             <?php
                                                                 echo $this->session->flashdata("error"); 
                                                             ?>
@@ -76,7 +78,7 @@
                                 </form>
             </div>
     </div>
-
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
    
