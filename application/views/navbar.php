@@ -8,15 +8,34 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+    <style>
+        .w3-sidebar {
+            background-color: #2A3634;
+        }
+        .greatmates {
+            color: #FECA9C;
+        }
+        .nav-link {
+            color: #D5AF8B;
+        }
+</style>
   </head>
 
   <body>
     <div class="wrapper">
           <div class="w3-sidebar w3-bar-block" style="width:18%">
-            <a class="nav-link" href="<?=base_url('index.php/main/dashboard')?>">Dashboard <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="<?=base_url('index.php/main/new_farm')?>">New Farm <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="<?=base_url('index.php/main/monthly_records')?>">Monthly Records <span class="sr-only">(current)</span></a>
+            <div class="greatmates text-center">
+                <div class="container mt-2">
+                    <h1>Great Mates</h1>
+                </div>
+                <div class="mt-5">
+                    <a class="nav-link" href="<?=base_url('index.php/main/dashboard')?>">Dashboard<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?=base_url('index.php/main/new_farm')?>">New Farm <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?=base_url('index.php/main/monthly_records')?>">Monthly Records <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?=base_url('index.php/main/monthly_reports')?>">Monthly Reports <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?=base_url('index.php/main/annual_reports')?>">Annual Reports <span class="sr-only">(current)</span></a>
+                </div>
+            </div>
           </div>
 
     </div>

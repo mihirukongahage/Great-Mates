@@ -1,18 +1,6 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<?php include('partials/header.php')?>
     
-    <!-- Bootstrap CSS -->
- 
-    <script src="https://code.highcharts.com/highcharts.src.js"></script>
-
-  </head>
-  <body>
-    
-    <div class="container">
+    <div class="section offset-4 offset-sm-3 offset-md-3">
       <h1>Divisional Veterinary Office</h1>
       <h4 class="card-subtitle mb-2 text-muted">Field Operation Management System</h4>
 
@@ -55,5 +43,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   
-  </body>
-</html>
+<?php include('partials/footer.php')?>

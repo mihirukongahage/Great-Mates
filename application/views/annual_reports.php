@@ -13,7 +13,7 @@
   </head>
   <body>
     
-    <div class="container">
+    <div class="section offset-4 offset-sm-3 offset-md-3">
       <h1>Annual Records</h1>
       <h4 class="card-subtitle mb-2 text-muted"></h4>
 
