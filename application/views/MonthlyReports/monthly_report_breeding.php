@@ -1,4 +1,4 @@
-    <!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -28,77 +28,48 @@
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 </style>
-
-
   </head>
   <body>
     <div class="section offset-4 offset-sm-3 offset-md-3">
-      <h1>Monthly Records</h1>
-      <h4 class="card-subtitle mb-2 text-muted"></h4>
+      <h1>Artificial breeding report</h1>
+      <h4 class="card-subtitle mb-2 text-muted">dd/mm/yyyy</h4>
+        <div class="section mt-5">
 
-        <div class="section">
-            <div class="row">
-                <div class="cardContainer offset-1 w3-hover-sepia"> 
-                    <a class="offset-md-1" href="<?=base_url('index.php/main/cattle_records')?>">
-                        <div class="card cardContaine" style="width: 18rem;">
-                            <img src="../../assets/img/cattle.jpg" class="card-img-top" alt="cattle" height="175">
-                            <div class="card-body">
-                                <div class="text-center">
-                                    <h2 class="card-text">Cattle</h2>
-                                    <h6 class="card-subtitle mb-2 text-muted">Monthly records for cattle</h6>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </a>
+              <div class="card card-plain w-75 p-1">
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <tbody>
+                      <thead class="">
+                        <tr><th>
+                          Farm ID
+                        </th>
+                        <th>
+                          Type
+                        </th>
+                        <th>
+                          Semen code
+                        </th>
+                      </tr>
+                      </thead>
+                        <tr>
+                          <td>
+                            Number of animals in the area
+                          </td>
+                          <td>
+                            adsad
+                          </td>
+                          <td>
+                            adasd
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
-                <div class="cardContainer offset-1 w3-hover-sepia"> 
-                <a class="offset-md-1" href="<?=base_url('index.php/main/poultry_records')?>">
-                    <div class="card cardContaine" style="width: 18rem;">
-                        <img src="../../assets/img/poultry.jpeg" class="card-img-top" alt="poultry" height="175">
-                        <div class="card-body">
-                            <div class="text-center">
-                                <h2 class="card-text">Poultry</h2>
-                                <h6 class="card-subtitle mb-2 text-muted">Monthly records for poultry</h6>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                
-                </div>
-                <div class="cardContainer offset-1 w3-hover-sepia"> 
-                <a class="offset-md-1" href="<?=base_url('index.php/main/piggery_records')?>">
-                    <div class="card cardContaine" style="width: 18rem;">
-                        <img src="../../assets/img/piggery.jpg" class="card-img-top" alt="piggery" height="175">
-                        <div class="card-body ">
-                            <div class="text-center">
-                                <h2 class="card-text">Piggery</h2>
-                                <h6 class="card-subtitle mb-2 text-muted">Monthly records for piggery</h6>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                
-                </div>
-                <div class="cardContainer offset-1 w3-hover-sepia"> 
-                <a class="offset-md-1" href="<?=base_url('index.php/main/goat_records')?>">
-                    <div class="card cardContaine" style="width: 18rem;">
-                        <img src="../../assets/img/goat.jpg" class="card-img-top" alt="goat" height="175">
-                        <div class="card-body">
-                            <div class="text-center">
-                                <h2 class="card-text">Goat</h2>
-                                <h6 class="card-subtitle mb-2 text-muted">Monthly records for goat</h6>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                
-                </div>
+              </div>
             </div>
-        </div>
         <div class="mt-5"></div>
-
-   
 </div>
 
     <!-- Optional JavaScript -->

@@ -193,6 +193,61 @@ class Main extends CI_Controller {
 
     }
 
+    /////////////////////// Annual Report /////////////////
+/*
+    Cattle Report
+    */
+    public function annual_report_cattle(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('AnnualReports/annual_report_cattle');
+
+    }
+
+    /*
+    Poultry Report
+    */
+    public function annual_report_poultry(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('AnnualReports/annual_report_poultry');
+
+    }
+
+    /*
+    Piggery Report
+    */
+    public function annual_report_piggery(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('AnnualReports/annual_report_piggery');
+
+    }
+
+    /*
+    Goat Report
+    */
+    public function annual_report_goat(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('AnnualReports/annual_report_goat');
+
+    }
+
+    /*
+    Breeding Report
+    */
+    public function annual_report_breeding(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('AnnualReports/annual_report_breeding');
+
+    }
 
 
 
