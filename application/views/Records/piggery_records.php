@@ -1,4 +1,4 @@
-<!doctype html>
+    <!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -10,14 +10,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+
+    <style>
+    .card-body{
+      background-color: #DAAF8D;
+    }
+
+    body{
+      background-color: 	#C8DFD9;
+    }
+
+    .card-body{
+      color: 	#0b2829;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
+
   </head>
   <body>
-    
-    <div class="container">
-        <h1>Monthly Records</h1>
-        <h5 class="card-subtitle mb-2 text-muted">Details related to poultry</h5>
-            <div class="mt-5">
-                                <form method="post" action="<?php echo base_url(); ?>index.php/main/signup_validate">
+    <div class="section offset-4 offset-sm-3 offset-md-3">
+      <h1>Monthly Records</h1>
+      <h4 class="card-subtitle mb-2 text-muted">Piggery records for the month</h4>
+
+        <div class="section mt-5">
+            <form method="post" action="<?php echo base_url(); ?>index.php/main/signup_validate">
                                     <div class="form-group">
                                         <label for="Farm_reg_no">Farm Registration Number</label>
                                         <input type="text" name="farm_reg_no" class="form-control" id="farm_reg_no" placeholder="Farm Registration Number">
@@ -38,11 +59,6 @@
                                         <label for="No_of_animals">Number of Animals</label>
                                         <input type="number" name="no_of_animals" class="form-control" id="no_of_animals" placeholder="Number of Animals">
                                         <!-- <span class="text-danger"><?php echo form_error('no_of_animals'); ?></span> -->
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Egg_production">Egg Production</label>
-                                        <input type="number" name="egg_production" class="form-control" id="egg_production" placeholder="Egg Production">
-                                        <!-- <span class="text-danger"><?php echo form_error('egg_production'); ?></span> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="Meat_production">Meat Production</label>
@@ -66,8 +82,11 @@
                                     ?>
                                     </div>
                                 </form>
-            </div>
-    </div>
+        </div>
+        <div class="mt-5"></div>
+
+   
+</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

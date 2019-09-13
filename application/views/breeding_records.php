@@ -14,7 +14,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
-
+    
     <style>
     .card-body{
       background-color: #DAAF8D;
@@ -24,6 +24,10 @@
       background-color: 	#C8DFD9;
     }
 
+    a:hover{
+        text-decoration: none;
+    }
+    
     .card-body{
       color: 	#0b2829;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -33,10 +37,10 @@
 
   </head>
   <body>
+  <link rel="stylesheet" href="<?php echo base_url('assets/css/newFarm.css');?>">
     <div class="section offset-4 offset-sm-3 offset-md-3">
-      <h1>Monthly Records</h1>
-      <h4 class="card-subtitle mb-2 text-muted">Cattle records for the month</h4>
-
+      <h1>Breeding Records</h1>
+      <h4 class="card-subtitle mb-2 text-muted">Artificial breeding records</h4>
         <div class="section mt-5">
             <form method="post" action="<?php echo base_url(); ?>index.php/main/signup_validate">
                                     <div class="form-group">
@@ -44,10 +48,17 @@
                                         <input type="text" width="5" name="farm_reg_no" class="form-control" id="farm_reg_no" placeholder="Farm Registration Number">
                                         <!-- <span class="text-danger"><?php echo form_error('faarm_reg_no'); ?></span> -->
                                     </div>
+                                    <div class="checkBoxContainer">
+                                        <label class="stockType">Live Stock type :</label>
+                                        <div class="form-group">
+                                            <input type="checkbox" name="cattle" class="form-control checkBoxes"  id="cattle"><label class="textSpacing">Cattle</label> <br>
+                                            <input type="checkbox" name="goat"    class="form-control checkBoxes"    id="goat"><label class="textSpacing">Goat</label>   <br>
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <label for="Year">Year</label>
                                         <input class="date-own form-control" name="year" type="text" placeholder="Year">
-                                        <!-- <span class="text-danger"><?php echo form_error('owner_name'); ?></span> -->
+                                        <!-- <span class="text-danger"><?php echo form_error('year'); ?></span> -->
                                         <script type="text/javascript">
                                         $('.date-own').datepicker({
                                             minViewMode: 2,
@@ -56,35 +67,20 @@
                                     </script>
                                     </div>
                                     <div class="form-group">
-                                        <label for="No_of_animals">Number of Animals</label>
-                                        <input type="number" name="no_of_animals" class="form-control" id="no_of_animals" placeholder="Number of Animals">
-                                        <!-- <span class="text-danger"><?php echo form_error('no_of_animals'); ?></span> -->
+                                        <label for="Year">Month</label>
+                                        <input class="date-own form-control" name="month" type="text" placeholder="Month">
+                                        <!-- <span class="text-danger"><?php echo form_error('month'); ?></span> -->
+                                        <script type="text/javascript">
+                                        $('.date').datepicker({
+                                            minViewMode: 2,
+                                            format: 'mm-dd-yyyy'
+                                        });
+                                    </script>
                                     </div>
                                     <div class="form-group">
-                                        <label for="Amount_of_milk">Amount of Milk</label>
-                                        <input type="number" name="amount_of_milk" class="form-control" id="amount_of_milk" placeholder="Amount of Milk">
-                                        <!-- <span class="text-danger"><?php echo form_error('amount_of_milk'); ?></span> -->
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Meat_production">Meat Production</label>
-                                        <input type="number" name="meat_production" class="form-control" id="meat_production" placeholder="Meat Production">
-                                        <!-- <span class="text-danger"><?php echo form_error('meat_production'); ?></span> -->
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Expences">Expences</label>
-                                        <input type="number" name="expences" class="form-control" id="expences" placeholder="Expences">
-                                        <!-- <span class="text-danger"><?php echo form_error('expences'); ?></span> -->
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Meat_production">Income</label>
-                                        <input type="number" name="income" class="form-control" id="income" placeholder="Income">
-                                        <!-- <span class="text-danger"><?php echo form_error('income'); ?></span> -->
-                                    </div>
-                                    <div class="text-center">
-                                    <button type="submit" name="insert" class="btn btn-primary" name="save">Add</button>
-                                    <?php
-                                        echo $this->session->flashdata("error"); 
-                                    ?>
+                                        <label for="Semen_code">Semen Code</label>
+                                        <input type="number" name="semen_code" class="form-control" id="semen_code" placeholder="Semen Code">
+                                        <!-- <span class="text-danger"><?php echo form_error('semen_code'); ?></span> -->
                                     </div>
                                 </form>
         </div>

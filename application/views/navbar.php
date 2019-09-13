@@ -32,6 +32,7 @@
                     <a class="nav-link" href="<?=base_url('index.php/main/dashboard')?>">Dashboard<span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?=base_url('index.php/main/new_farm')?>">New Farm <span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?=base_url('index.php/main/monthly_records')?>">Monthly Records <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?=base_url('index.php/main/breeding_records')?>">Breeding Records <span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?=base_url('index.php/main/monthly_reports')?>">Monthly Reports <span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?=base_url('index.php/main/annual_reports')?>">Annual Reports <span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?=base_url('index.php/main/about')?>">About <span class="sr-only">(current)</span></a>

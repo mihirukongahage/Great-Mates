@@ -45,6 +45,17 @@ class Main extends CI_Controller {
     }
 
     /*
+    Breeding Records
+    */
+    public function breeding_records(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('breeding_records');
+
+    }
+
+    /*
     Monthly Reports
     */
     public function monthly_reports(){
@@ -96,7 +107,7 @@ class Main extends CI_Controller {
 
         $p["username"] = $this->session->userdata('username');
         $this->load->view('navbar',$p);
-        $this->load->view('poultry_records');
+        $this->load->view('Records/poultry_records');
 
     }
 
@@ -107,7 +118,7 @@ class Main extends CI_Controller {
 
         $p["username"] = $this->session->userdata('username');
         $this->load->view('navbar',$p);
-        $this->load->view('piggery_records');
+        $this->load->view('Records/piggery_records');
 
     }
 
@@ -118,10 +129,65 @@ class Main extends CI_Controller {
 
         $p["username"] = $this->session->userdata('username');
         $this->load->view('navbar',$p);
-        $this->load->view('goat_records');
+        $this->load->view('Records/goat_records');
 
     }
 
+    /////////////////////// Monthly Report /////////////////
+/*
+    Cattle Report
+    */
+    public function monthly_report_cattle(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('MonthlyReports/monthly_report_cattle');
+
+    }
+
+    /*
+    Poultry Report
+    */
+    public function monthly_report_poultry(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('MonthlyReports/monthly_report_poultry');
+
+    }
+
+    /*
+    Piggery Report
+    */
+    public function monthly_report_piggery(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('MonthlyReports/monthly_report_piggery');
+
+    }
+
+    /*
+    Goat Report
+    */
+    public function monthly_report_goat(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('MonthlyReports/monthly_report_goat');
+
+    }
+
+    /*
+    Breeding Report
+    */
+    public function monthly_report_breeding(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('MonthlyReports/monthly_report_breeding');
+
+    }
 
 
 
