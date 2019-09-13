@@ -109,6 +109,11 @@ class Main extends CI_Controller {
         $this->load->view('navbar',$p);
         $this->load->view('Records/poultry_records');
 
+        /*
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('poultry_records');*/
+
     }
 
     /*
@@ -126,7 +131,6 @@ class Main extends CI_Controller {
     Goat Records
     */
     public function goat_records(){
-
         $p["username"] = $this->session->userdata('username');
         $this->load->view('navbar',$p);
         $this->load->view('Records/goat_records');
