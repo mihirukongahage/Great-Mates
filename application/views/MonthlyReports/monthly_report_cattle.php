@@ -40,89 +40,54 @@
                 <div class="card-body">
                   <div class="table-responsive">
                     <table class="table table-hover">
-                      <thead class="">
-                        <tr><th>
-                          Number of Animals
-                        </th>
-                        <th>
-                          Milk Production
-                        </th>
-                        <th>
-                          Meat Production
-                        </th>
-                        <th>
-                          Expences for cattle farming
-                        </th>
-                        <th>
-                          Income form cattle farming
-                        </th>
-                      </tr></thead>
                       <tbody>
                         <tr>
                           <td>
-                            1
+                            Number of animals in the area
                           </td>
                           <td>
-                            Dakota Rice
-                          </td>
-                          <td>
-                            Niger
-                          </td>
-                          <td>
-                            Oud-Turnhout
-                          </td>
-                          <td>
-                            $36,738
+                            Number
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            2
+                            Milk Production
                           </td>
                           <td>
-                            Minerva Hooper
-                          </td>
-                          <td>
-                            Curaçao
-                          </td>
-                          <td>
-                            Sinaai-Waas
-                          </td>
-                          <td>
-                            $23,789
+                            l
                           </td>
                         </tr>
                         <tr>
                           <td>
-                            3
+                            Meat Production
                           </td>
                           <td>
-                            Sage Rodriguez
-                          </td>
-                          <td>
-                            Netherlands
-                          </td>
-                          <td>
-                            Baileux
-                          </td>
-                          <td>
-                            $56,142
+                            kg
                           </td>
                         </tr>
-                        
-                        
-                        
+                        <tr>
+                          <td>
+                            This months expences for cattle farming
+                          </td>
+                          <td>
+                            lkr
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            This months income from cattle farming
+                          </td>
+                          <td>
+                            lkr
+                          </td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
             </div>
-            
-        
         <div class="mt-5"></div>
-
-   
 </div>
 
     <!-- Optional JavaScript -->
