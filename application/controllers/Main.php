@@ -96,7 +96,11 @@ class Main extends CI_Controller {
 
         $p["username"] = $this->session->userdata('username');
         $this->load->view('navbar',$p);
-        $this->load->view('poultry_records');
+        $this->load->view('Records/poultry_records');
+        /*
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('poultry_records');*/
 
     }
 
@@ -107,7 +111,7 @@ class Main extends CI_Controller {
 
         $p["username"] = $this->session->userdata('username');
         $this->load->view('navbar',$p);
-        $this->load->view('piggery_records');
+        $this->load->view('Records/piggery_records');
 
     }
 
@@ -115,11 +119,9 @@ class Main extends CI_Controller {
     Goat Records
     */
     public function goat_records(){
-
         $p["username"] = $this->session->userdata('username');
         $this->load->view('navbar',$p);
-        $this->load->view('goat_records');
-
+        $this->load->view('Records/goat_records');
     }
 
 
