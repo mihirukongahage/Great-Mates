@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2019 at 06:09 AM
+-- Generation Time: Sep 12, 2019 at 03:18 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.1.32
 
@@ -21,35 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `m_ci`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `cattlerecords`
---
-
-CREATE TABLE `cattlerecords` (
-  `id` int(11) NOT NULL,
-  `no_of_animals` int(11) NOT NULL,
-  `amount_of_milk` int(11) NOT NULL,
-  `meat_production` int(11) NOT NULL,
-  `regNo` varchar(11) NOT NULL,
-  `year` int(11) NOT NULL,
-  `month` varchar(11) NOT NULL,
-  `Expences` int(11) NOT NULL,
-  `Income` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `cattlerecords`
---
-
-INSERT INTO `cattlerecords` (`id`, `no_of_animals`, `amount_of_milk`, `meat_production`, `regNo`, `year`, `month`, `Expences`, `Income`) VALUES
-(1, 7, 7, 7, '', 2014, 'June', 7, 7),
-(2, 1231, 111111111, 2147483647, '', 2018, 'February', 2147483647, 4444444),
-(3, 11111111, 2222222, 3, '', 1, 'May', 4444, 2147483647),
-(4, 1, 2, 3, '', 2018, 'March', 4, 5),
-(5, 2, 2, 2, '', 1929, 'January', 2, 2);
 
 -- --------------------------------------------------------
 
@@ -83,81 +54,6 @@ INSERT INTO `farms` (`regNo`, `Phone`, `Address`, `Name`, `ID`, `cattle`, `poult
 ('sadfa sdiooetpfh', 2147483647, '23423 2w 3rwaeqwe', 'wegugwefiugdasfgasdfgasgd fuagsdf3333333333333333333333333333', 7, 0, 1, 1, 1),
 ('qqqqqqqqqqqqqqq', 2341234, 'ttttttttttt', 'wwwwwwwwwwwww', 8, 1, 0, 1, 0),
 ('Nipuna sdfaaaaaaaaaa', 3423412, 'efqeasf s22222222', 'aaaaaaaaaaa', 9, 0, 1, 0, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `goatrecords`
---
-
-CREATE TABLE `goatrecords` (
-  `id` int(11) NOT NULL,
-  `no_of_animals` int(11) NOT NULL,
-  `amount_of_milk` int(11) NOT NULL,
-  `meat_production` int(11) NOT NULL,
-  `regNo` varchar(11) NOT NULL,
-  `year` int(11) NOT NULL,
-  `month` varchar(11) NOT NULL,
-  `Expences` int(11) NOT NULL,
-  `Income` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `goatrecords`
---
-
-INSERT INTO `goatrecords` (`id`, `no_of_animals`, `amount_of_milk`, `meat_production`, `regNo`, `year`, `month`, `Expences`, `Income`) VALUES
-(2, 1, 0, 1, '', 2018, 'February', 1, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `piggeryrecords`
---
-
-CREATE TABLE `piggeryrecords` (
-  `id` int(11) NOT NULL,
-  `no_of_animals` int(11) NOT NULL,
-  `meat_production` int(11) NOT NULL,
-  `regNo` varchar(11) NOT NULL,
-  `year` int(11) NOT NULL,
-  `month` varchar(11) NOT NULL,
-  `Expences` int(11) NOT NULL,
-  `Income` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `piggeryrecords`
---
-
-INSERT INTO `piggeryrecords` (`id`, `no_of_animals`, `meat_production`, `regNo`, `year`, `month`, `Expences`, `Income`) VALUES
-(2, 1111111111, 2147483647, '', 2018, 'February', 33333333, 4444444);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `poultryrecords`
---
-
-CREATE TABLE `poultryrecords` (
-  `id` int(11) NOT NULL,
-  `no_of_animals` int(11) NOT NULL,
-  `amount_of_eggs` int(11) NOT NULL,
-  `meat_production` int(11) NOT NULL,
-  `regNo` varchar(11) NOT NULL,
-  `year` int(11) NOT NULL,
-  `month` varchar(11) NOT NULL,
-  `Expences` int(11) NOT NULL,
-  `Income` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `poultryrecords`
---
-
-INSERT INTO `poultryrecords` (`id`, `no_of_animals`, `amount_of_eggs`, `meat_production`, `regNo`, `year`, `month`, `Expences`, `Income`) VALUES
-(2, 11111, 0, 33333, '', 2018, 'March', 44444, 5555),
-(3, 3, 2, 4, '', 2018, 'February', 5, 6);
 
 -- --------------------------------------------------------
 
@@ -235,34 +131,10 @@ INSERT INTO `users_log` (`id`, `fname`, `lname`, `email`, `username`, `password`
 --
 
 --
--- Indexes for table `cattlerecords`
---
-ALTER TABLE `cattlerecords`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `farms`
 --
 ALTER TABLE `farms`
   ADD PRIMARY KEY (`ID`);
-
---
--- Indexes for table `goatrecords`
---
-ALTER TABLE `goatrecords`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `piggeryrecords`
---
-ALTER TABLE `piggeryrecords`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `poultryrecords`
---
-ALTER TABLE `poultryrecords`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `service`
@@ -287,34 +159,10 @@ ALTER TABLE `users_log`
 --
 
 --
--- AUTO_INCREMENT for table `cattlerecords`
---
-ALTER TABLE `cattlerecords`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
 -- AUTO_INCREMENT for table `farms`
 --
 ALTER TABLE `farms`
   MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `goatrecords`
---
-ALTER TABLE `goatrecords`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `piggeryrecords`
---
-ALTER TABLE `piggeryrecords`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `poultryrecords`
---
-ALTER TABLE `poultryrecords`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `service`

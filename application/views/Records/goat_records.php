@@ -1,4 +1,4 @@
-<!doctype html>
+    <!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -24,6 +24,10 @@
       background-color: 	#C8DFD9;
     }
 
+    .card-body{
+      color: 	#0b2829;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
     .czard-body{
       color: 	#0b2829;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -45,9 +49,9 @@
     <div class="section offset-4 offset-sm-3 offset-md-3">
     <br>
       <h1>Monthly Records</h1>
-      <h4 class="card-subtitle mb-2 text-muted"></h4>
+      <h4 class="card-subtitle mb-2 text-muted">Goat records for the month</h4>
 
-        <div class="section">
+        <div class="section mt-5">
 
         <div class="formContainer">
         
