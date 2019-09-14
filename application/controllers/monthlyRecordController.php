@@ -19,10 +19,13 @@
                 'year'              =>$this->input->post('year'), 
                 'month'              =>$this->input->post('month'), 
             );   
-                //print_r($data);
-                $this->monthlyModel->cattleInsert($data);        
+            $this->monthlyModel->cattleInsert($data);        
         }
 
+        public function readCattles(){ 
+            $result['data']=$this->monthlyModel->cattlesRead();   
+            $this->load->view('MonthlyReports/monthly_report_cattle',$result);   
+        } 
 
         //Poultry
         public function insertPoultry(){
@@ -35,8 +38,7 @@
                 'year'              =>$this->input->post('year'), 
                 'month'              =>$this->input->post('month'), 
             );   
-                //print_r($data);
-                $this->monthlyModel->poultryInsert($data);        
+            $this->monthlyModel->poultryInsert($data);        
         }
 
         //Piggery
@@ -49,11 +51,10 @@
                 'year'              =>$this->input->post('year'), 
                 'month'              =>$this->input->post('month'), 
             );   
-                //print_r($data);
-                $this->monthlyModel->piggeryInsert($data);        
+            $this->monthlyModel->piggeryInsert($data);        
         }
         
-        
+        //Goat
         public function insertGoat(){
             $data = array(     
                 'no_of_animals'     =>$this->input->post('no_of_animals'), 
@@ -62,30 +63,21 @@
                 'income'            =>$this->input->post('income'),
                 'year'              =>$this->input->post('year'), 
                 'month'             =>$this->input->post('month'), 
-            );   
-                //print_r($data);
-                $this->monthlyModel->goatInsert($data);        
+            );  
+            $this->monthlyModel->goatInsert($data);        
         }
         
 
+
+
+
+
+
+
         public function index(){
-            echo "This is index";
+            echo "This is index of monthlyRecordController";
         }
     }
-
-
-
-
-
-
-        /*
-            echo $this->input->post('no_of_animals');
-            echo $this->input->post('amount_of_milk');
-            echo $this->input->post('meat_production'); 
-            echo $this->input->post('expences');       
-            echo $this->input->post('income');     
-            echo $this->input->post('year');
-*/
 ?>
 
     

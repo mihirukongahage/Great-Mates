@@ -1,6 +1,7 @@
 <?php 
     class monthlyModel extends CI_Model{
 
+ //---------------------Insert---------------------------
         public function cattleInsert($data){
             $this->load->helper('url');
             $this->db->insert('cattlerecords',$data);
@@ -24,5 +25,13 @@
             $this->db->insert('goatrecords',$data);
             redirect("/main/enter");
         }
+
+//--------------------Read---------------------------------
+        
+        function cattlesRead(){ 
+            $query = $this->db->get('cattlerecords'); 
+            return $query->result();
+        }
+
     }
 ?>
