@@ -1,4 +1,4 @@
-    <!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -27,15 +27,81 @@
       color: 	#0b2829;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+
+    .monthContainer{
+      width:200px; display:inline-block;
+    }
+
+    .form{
+      color:red;
+      width:400px;
+      //margin:auto;
+    }
+    .button{
+      display:inline-block; 
+    }
 </style>
   </head>
   <body>
     <div class="section offset-4 offset-sm-3 offset-md-3">
       <h1>Monthly report for goat</h1>
       <h4 class="card-subtitle mb-2 text-muted">Production report</h4>
-      <h4 class="card-subtitle mb-2 text-muted">dd/mm/yyyy</h4>
+      <h4 class="card-subtitle mb-2 text-muted">
+      <?= date("Y");?> 
+      <?php  
+          foreach($data as $row){ echo "/".$row->month ;} 
+      ?>
+      </h4>
         <div class="section mt-5">
 
+<div class="monthContainer">
+              <form  action="<?=base_url('index.php/monthlyRecordController/readGoat'); ?>" method="post"> 
+              <div class="form-group"> 
+                    <label for="sel1">Select month:</label>
+                    <select class="form-control" id="sel1" name="month"  >
+                      <option value="" selected disabled hidden>Choose here</option>
+                      <option>January	    </option>
+                      <option>February	</option>
+                      <option>March	    </option>
+                      <option>April	    </option>
+                      <option>May	   	    </option>
+                      <option>June	    </option>
+                      <option>July	    </option>
+                      <option>August	    </option>
+                      <option>September	</option>
+                      <option>October	    </option>
+                      <option>November	</option>
+                      <option>December	</option>
+                    </select>
+                    
+                  <!-- <span class="text-danger"><?php echo form_error('month'); ?></span> -->  
+                  </div>
+                  </div>
+                                                   
+                     <input type="submit" value="Select" class="button">
+              </form>
+ 
+
+              <?php
+
+                
+                        $number   = '' ;
+                        $milk     = '' ;
+                        $meat     = '' ;
+                        $expences = '' ;
+                        $income   = ''; 
+
+                if(isset($data)){
+                      foreach($data as $row){   
+                        $number   = $row->no_of_animals;
+                        $milk     = $row->amount_of_milk;
+                        $meat     = $row->meat_production;
+                        $expences = $row->Expences;
+                        $income   = $row->Income; 
+                          
+                      } 
+                } 
+               ?> 
               <div class="card card-plain w-75 p-1">
                 <div class="card-body">
                   <div class="table-responsive">
@@ -46,7 +112,7 @@
                             Number of animals in the area
                           </td>
                           <td>
-                            Number
+                             <?= $number ?>
                           </td>
                         </tr>
                         <tr>
@@ -54,7 +120,7 @@
                             Milk Production
                           </td>
                           <td>
-                            l
+                          <?= $milk ?> liters
                           </td>
                         </tr>
                         <tr>
@@ -62,7 +128,7 @@
                             Meat Production
                           </td>
                           <td>
-                            kg
+                          <?= $meat ?> kilograms
                           </td>
                         </tr>
                         <tr>
@@ -70,7 +136,7 @@
                             This months expences for goat farming
                           </td>
                           <td>
-                            lkr
+                          <?= $expences ?> lkr
                           </td>
                         </tr>
                         <tr>
@@ -78,9 +144,8 @@
                             This months income from goat farming
                           </td>
                           <td>
-                            lkr
+                          <?= $income ?> lkr
                           </td>
-                        </tr>
                       </tbody>
                     </table>
                   </div>
