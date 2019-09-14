@@ -27,6 +27,19 @@
       color: 	#0b2829;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+
+    .monthContainer{
+      width:200px; display:inline-block;
+    }
+
+    .form{
+      color:red;
+      width:400px;
+      //margin:auto;
+    }
+    .button{
+      display:inline-block; 
+    }
 </style>
   </head>
   <body>
@@ -35,6 +48,32 @@
       <h4 class="card-subtitle mb-2 text-muted">Production report</h4>
       <h4 class="card-subtitle mb-2 text-muted">dd/mm/yyyy</h4>
         <div class="section mt-5">
+
+<div class="monthContainer">
+              <form  action="<?=base_url('index.php/monthlyRecordController/readCattles'); ?>" method="post"> 
+              <div class="form-group"> 
+                    <label for="sel1">Select month:</label>
+                    <select class="form-control" id="sel1" name="month">
+                      <option>January	    </option>
+                      <option>February	</option>
+                      <option>March	    </option>
+                      <option>April	    </option>
+                      <option>May	   	    </option>
+                      <option>June	    </option>
+                      <option>July	    </option>
+                      <option>August	    </option>
+                      <option>September	</option>
+                      <option>October	    </option>
+                      <option>November	</option>
+                      <option>December	</option>
+                    </select>
+                    
+                  <!-- <span class="text-danger"><?php echo form_error('month'); ?></span> -->  
+                  </div>
+                  </div>
+                                                   
+                     <input type="submit" value="Select" class="button">
+              </form>
 
               <div class="card card-plain w-75 p-1">
                 <div class="card-body">
@@ -80,7 +119,21 @@
                           <td>
                             lkr
                           </td>
-                        </tr>
+
+                          <tbody>
+                                <?php
+                                  $i=1;
+                                  foreach($data as $row){  
+                                      echo '<tr class="tableRow">';
+                                      echo "<td>".$row->id."</td>";
+                                      echo "<td>".$row->Customer."</td>";
+                                      echo "<td>".$row->Message."</td>";
+                                      echo "<td>".$row->Rating."</td>";
+                                      echo "<td>".$row->Reviewed_time."</td>";//Reviewed_time	id 
+                                      echo "</tr>";
+                                      $i++;
+                                  }
+                                ?> 
                       </tbody>
                     </table>
                   </div>
