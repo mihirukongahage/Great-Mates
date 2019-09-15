@@ -49,7 +49,7 @@
       <h4 class="card-subtitle mb-2 text-muted">
       <?= date("Y");?> 
       <?php  
-          foreach($data as $row){ echo "/".$row->month ;} 
+            if (isset($data)){foreach($data as $row){ echo "/".$row->month ;}} 
       ?>
       </h4>
         <div class="section mt-5">
