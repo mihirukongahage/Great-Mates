@@ -33,9 +33,21 @@
     <div class="section offset-4 offset-sm-3 offset-md-3">
       <h1>Annual report for poultry</h1>
       <h4 class="card-subtitle mb-2 text-muted">Production report</h4>
-      <h4 class="card-subtitle mb-2 text-muted">dd/mm/yyyy</h4>
+      <h4 class="card-subtitle mb-2 text-muted"><?= date("Y")?></h4>
         <div class="section mt-5">
 
+        <?php
+            $animals = 0 ;
+            $meat_production   = 0;     
+            $Expences          = 0;
+            $Income            = 0;  
+                foreach($data as $row){   
+                  $animals = $animals + $row->no_of_animals; 
+                  $meat_production =   $meat_production + $row->meat_production;
+                  $Expences = $Expences  + $row->Expences;
+                  $Income   = $Income    + $row->Income;  
+                }  
+        ?>
               <div class="card card-plain w-75 p-1">
                 <div class="card-body">
                   <div class="table-responsive">
@@ -46,14 +58,14 @@
                             Number of animals in the area
                           </td>
                           <td>
-                            Number
+                            <?= $animals?>
                           </td>
                         </tr>
                           <td>
                             Meat Production
                           </td>
-                          <td>
-                            kg
+                          <td> 
+                          <?= $meat_production ?> Kilograms 
                           </td>
                         </tr>
                         <tr>
@@ -61,7 +73,8 @@
                             This year expences for poultry farming
                           </td>
                           <td>
-                            lkr
+                            
+                          <?= $Expences ?> lkr
                           </td>
                         </tr>
                         <tr>
@@ -69,7 +82,8 @@
                             This year income from poultry farming
                           </td>
                           <td>
-                            lkr
+                            
+                          <?= $Income  ?> lkr
                           </td>
                         </tr>
                       </tbody>
@@ -81,6 +95,7 @@
         <div class="mt-5"></div>
 </div>
 
+ 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
    
