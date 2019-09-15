@@ -28,8 +28,23 @@
 
 //--------------------Read---------------------------------
         
-        function cattlesRead(){ 
-            $query = $this->db->get('cattlerecords'); 
+        function cattlesRead($month){ 
+            $query = $this->db->get_where('cattlerecords', array('month' => $month , 'year' =>date("Y")));
+            return $query->result();
+        }
+                
+        function poultryRead($month){ 
+            $query = $this->db->get_where('poultryrecords', array('month' => $month , 'year' =>date("Y")));
+            return $query->result();
+        }
+                
+        function piggeryRead($month){ 
+            $query = $this->db->get_where('piggeryrecords', array('month' => $month , 'year' =>date("Y")));
+            return $query->result();
+        }
+                
+        function goatRead($month){ 
+            $query = $this->db->get_where('goatrecords', array('month' => $month , 'year' =>date("Y")));
             return $query->result();
         }
 

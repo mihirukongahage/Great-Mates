@@ -1,12 +1,22 @@
 <?php 
  
-    class  monthlyRecordController extends CI_Controller {  
-        
-        public function __construct(){
-            parent::__construct();  
-            $this->load->database(); 
-            $this->load->model('monthlyModel');  
-        }
+ 
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class monthlyRecordController extends CI_Controller {
+
+    public function __construct()
+    {
+    parent::__construct();
+    
+    $this->load->database();
+    $this->load->helper('url');
+    $this->load->helper('form');
+    $this->load->library('form_validation');
+    $this->load->model('monthlyModel');  
+    
+    }
+ 
 
         //cattle 
         public function insertCattle(){
@@ -23,10 +33,19 @@
         }
 
         public function readCattles(){ 
-            $result['data']=$this->monthlyModel->cattlesRead();   
-            $this->load->view('MonthlyReports/monthly_report_cattle',$result);   
-        } 
+            
+            if(($this->input->post('month')==='null')){
+                $month = "January";
+            }else{
+                $month =  $this->input->post('month');
+            } 
 
+            $result['data']=$this->monthlyModel->cattlesRead($month);   
+            $p["username"] = $this->session->userdata('username');
+            $this->load->view('navbar',$p);
+            $this->load->view('MonthlyReports/monthly_report_cattle',$result); 
+        } 
+//------------------------------------------------------------------------------------------------------------------------
         //Poultry
         public function insertPoultry(){
             $data = array(     
@@ -41,6 +60,20 @@
             $this->monthlyModel->poultryInsert($data);        
         }
 
+        public function readPoultry(){ 
+            
+            if(($this->input->post('month')==='null')){
+                $month = "January";
+            }else{
+                $month =  $this->input->post('month');
+            } 
+
+            $result['data']=$this->monthlyModel->poultryRead($month);   
+            $p["username"] = $this->session->userdata('username');
+            $this->load->view('navbar',$p);
+            $this->load->view('MonthlyReports/monthly_report_poultry',$result); 
+        } 
+//------------------------------------------------------------------------------------------------------------------------
         //Piggery
         public function insertPiggery(){
             $data = array(     
@@ -53,7 +86,21 @@
             );   
             $this->monthlyModel->piggeryInsert($data);        
         }
-        
+
+        public function readPiggery(){ 
+            
+            if(($this->input->post('month')==='null')){
+                $month = "January";
+            }else{
+                $month =  $this->input->post('month');
+            } 
+
+            $result['data']=$this->monthlyModel->piggeryRead($month);   
+            $p["username"] = $this->session->userdata('username');
+            $this->load->view('navbar',$p);
+            $this->load->view('MonthlyReports/monthly_report_piggery',$result); 
+        } 
+//------------------------------------------------------------------------------------------------------------------------        
         //Goat
         public function insertGoat(){
             $data = array(     
@@ -68,7 +115,20 @@
         }
         
 
+        public function readGoat(){ 
+            
+            if(($this->input->post('month')=='null')){
+                $month = "January";
+            }else{
+                $month =  $this->input->post('month');
+            } 
 
+            $result['data']=$this->monthlyModel->goatRead($month);   
+            $p["username"] = $this->session->userdata('username');
+            $this->load->view('navbar',$p);
+            $this->load->view('MonthlyReports/monthly_report_goat',$result); 
+        } 
+//------------------------------------------------------------------------------------------------------------------------     
 
 
 

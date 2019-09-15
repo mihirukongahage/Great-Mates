@@ -42,17 +42,19 @@
       <h1>Breeding Records</h1>
       <h4 class="card-subtitle mb-2 text-muted">Artificial breeding records</h4>
         <div class="section mt-5">
-            <form method="post" action="<?php echo base_url(); ?>index.php/main/signup_validate">
+            
+              <form  action="<?=base_url('index.php/breedingController/write'); ?>" method="post"> 
+          
                                     <div class="form-group">
                                         <label for="Farm_reg_no">Farm Registration Number</label>
-                                        <input type="text" width="5" name="farm_reg_no" class="form-control" id="farm_reg_no" placeholder="Farm Registration Number">
+                                        <input type="text" width="5" name="form_reg_no" class="form-control" id="farm_reg_no" placeholder="Farm Registration Number">
                                         <!-- <span class="text-danger"><?php echo form_error('faarm_reg_no'); ?></span> -->
                                     </div>
                                     <div class="checkBoxContainer">
                                         <label class="stockType">Live Stock type :</label>
                                         <div class="form-group">
-                                            <input type="checkbox" name="cattle" class="form-control checkBoxes"  id="cattle"><label class="textSpacing">Cattle</label> <br>
-                                            <input type="checkbox" name="goat"    class="form-control checkBoxes"    id="goat"><label class="textSpacing">Goat</label>   <br>
+                                            <input type="checkbox" name="cattle" class="form-control checkBoxes"   ><label class="textSpacing">Cattle</label> <br>
+                                            <input type="checkbox" name="goat"    class="form-control checkBoxes"     ><label class="textSpacing">Goat</label>   <br>
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -66,20 +68,33 @@
                                         });
                                     </script>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="Year">Month</label>
-                                        <input class="date-own form-control" name="month" type="text" placeholder="Month">
-                                        <!-- <span class="text-danger"><?php echo form_error('month'); ?></span> -->
-                                        <script type="text/javascript">
-                                        $('.date').datepicker({
-                                            minViewMode: 2,
-                                            format: 'mm-dd-yyyy'
-                                        });
-                                    </script>
-                                    </div>
+                                  
+                                   
+                                    <div class="form-group"> 
+                                    <label for="sel1">Select month:</label>
+                                    <select class="form-control" id="sel1" name="month"  >
+                                      <option value="" selected disabled hidden>Choose here</option>
+                                      <option>January	    </option>
+                                      <option>February	</option>
+                                      <option>March	    </option>
+                                      <option>April	    </option>
+                                      <option>May	   	    </option>
+                                      <option>June	    </option>
+                                      <option>July	    </option>
+                                      <option>August	    </option>
+                                      <option>September	</option>
+                                      <option>October	    </option>
+                                      <option>November	</option>
+                                      <option>December	</option>
+                                    </select>
+                                    
+                                  <!-- <span class="text-danger"><?php echo form_error('month'); ?></span> -->  
+                                  </div> 
+
+
                                     <div class="form-group">
                                         <label for="Semen_code">Semen Code</label>
-                                        <input type="number" name="semen_code" class="form-control" id="semen_code" placeholder="Semen Code">
+                                        <input type="number" name="code" class="form-control" id="semen_code" placeholder="Semen Code">
                                         <!-- <span class="text-danger"><?php echo form_error('semen_code'); ?></span> -->
                                     </div>
                                     <button type="submit" name="insert" class="btn btn-primary" name="save">Add</button>

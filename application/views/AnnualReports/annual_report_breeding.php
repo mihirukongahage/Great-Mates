@@ -32,9 +32,10 @@
   <body>
     <div class="section offset-4 offset-sm-3 offset-md-3">
       <h1>Artificial breeding report</h1>
-      <h4 class="card-subtitle mb-2 text-muted">dd/mm/yyyy</h4>
+      <h4 class="card-subtitle mb-2 text-muted"><?= date("Y")?></h4>
         <div class="section mt-5">
-
+        
+ 
               <div class="card card-plain w-75 p-1">
                 <div class="card-body">
                   <div class="table-responsive">
@@ -53,15 +54,23 @@
                       </tr>
                       </thead>
                         <tr>
-                          <td>
-                            Number of animals in the area
-                          </td>
-                          <td>
-                            adsad
-                          </td>
-                          <td>
-                            adasd
-                          </td>
+                        <?php
+                                $type   = '' ;
+                                foreach($data as $row){   
+                                  if(($row->cattle)&& (!$row->goat)){
+                                    $type = 'cattle';
+                                  }else if((!$row->cattle)&& ($row->goat)){
+                                    $type = 'goat';
+                                  }else if(($row->goat) && ($row->cattle)){
+                                    $type = 'cattle , goat';
+                                  }
+                                  echo "<tr>";
+                                  echo "<td>".$row->regNo."</td>";
+                                  echo "<td>".$type."</td>"; 
+                                  echo "<td>". $row->code."</td>";  
+                                }  
+                        ?>  
+ 
                         </tr>
                       </tbody>
                     </table>
