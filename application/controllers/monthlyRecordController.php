@@ -17,7 +17,7 @@
                 'expences'          =>$this->input->post('expences'),
                 'income'            =>$this->input->post('income'),
                 'year'              =>$this->input->post('year'), 
-                'month'              =>$this->input->post('month'), 
+                'month'             =>$this->input->post('month'), 
             );   
             $this->monthlyModel->cattleInsert($data);        
         }

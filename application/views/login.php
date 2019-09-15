@@ -12,7 +12,7 @@
     </head>
   <body>
     <div class="row mt-5">
-        <div class="col col-sm-12 col-md-6 col-lg-4 offset-md-2 offset-lg-3">
+        <div class="col col-sm-12 col-md-6 col-lg-4 offset-md-2 offset-lg-2">
             <div class="card login-card" style="width: 50rem"">
 
                 <div class="card-body">
