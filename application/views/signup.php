@@ -36,8 +36,8 @@
                             <div class="mt-5">
                                 <form method="post" action="<?php echo base_url(); ?>index.php/main/signup_validate">
                                     <div class="form-group">
-                                        <label for="Name">Name</label>
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="Name">
+                                        <label for="Name">Username</label>
+                                        <input type="text" name="username" class="form-control" id="username" placeholder="Name">
                                         <!-- <span class="text-danger"><?php echo form_error('name'); ?></span> -->
                                     </div>
                                     <div class="form-group">
@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="Password">Password</label>
-                                        <input type="text" name="password" class="form-control" id="password" placeholder="Enter Password">
+                                        <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password">
                                         <!-- <span class="text-danger"><?php echo form_error('password'); ?></span> -->
                                     </div>
                                     <div class="form-group">

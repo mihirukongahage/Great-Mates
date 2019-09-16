@@ -26,5 +26,11 @@ class Connect extends CI_Model{
         }
     }
 
+    public function insert($data){
+            $this->load->helper('url');
+            $this->db->insert('users_log',$data);
+            redirect("/main/login");
+        }
+
 }
 ?>

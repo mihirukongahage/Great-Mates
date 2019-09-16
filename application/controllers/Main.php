@@ -12,6 +12,7 @@ class Main extends CI_Controller {
     $this->load->helper('url');
     $this->load->helper('form');
     $this->load->library('form_validation');
+    $this->load->model('Connect');
     
     }
 
@@ -361,7 +362,6 @@ class Main extends CI_Controller {
 
     */
 
-
     public function signup()
     {
         $this->load->view('signup');
@@ -372,27 +372,30 @@ class Main extends CI_Controller {
     Signup validation and auth
     
     */
-
     public function signup_validate()
     {
-        $this->form_validation->set_rules('fname', 'Firstname', 'required');
-        $this->form_validation->set_rules('lname', 'Lastname', 'required');
-        $this->form_validation->set_rules('username', 'Username', 'required');
-        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('username', 'username', 'required');
+        $this->form_validation->set_rules('office_id', 'OfficeId', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
         $this->form_validation->set_rules('cpassword', 'CPassword', 'required');
         
         if($this->input->post('save'))
         {
-            $fname = $this->input->post('fname');
-            $lname = $this->input->post('lname');
-            $uname = $this->input->post('uname');
-            $email = $this->input->post('email');
+            $username = $this->input->post('username');
+            $office_id = $this->input->post('office_id');
             $password = $this->input->post('password');
-            $isAdmin = 0;
-            $this->connect->sign_up($fname, $lname, $uname, $email, $password, $isAdmin);
+            $isAdmin = 1;
+            $this->connect->sign_up($username, $office_id, $password);
         }
+
+        $data = array(    
+                    'username'     => $this->input->post('username'),
+                    'office_id'     => $this->input->post('office_id'),
+                    'password'     => $this->input->post('password'), 
+                    );   
+        $this->Connect->insert($data);
     }
+    
     
  }
 ?>
