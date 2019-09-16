@@ -59,6 +59,8 @@ class annualController extends CI_Controller {
         public function index(){
             echo "This is index of AnnualController";
         }
+
+        
     }
 ?>
 

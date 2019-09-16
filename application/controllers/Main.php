@@ -250,6 +250,17 @@ class Main extends CI_Controller {
 
     }
 
+    /*
+    View
+    */
+    public function view(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('view');
+
+    }
+
 
 
     /*

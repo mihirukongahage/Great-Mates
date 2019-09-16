@@ -36,6 +36,8 @@
                 'piggery'  => $piggery,
                 'goat'     => $goat   ,
                 'Name'          => $this->input->post('owner_name'), 
+                'month' => date("F")
+                
                 );   
                 $this->farmModel->insert($data);       
         }

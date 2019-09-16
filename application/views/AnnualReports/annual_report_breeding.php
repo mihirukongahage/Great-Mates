@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
 
+    
     <style>
     .card-body{
       background-color: #DAAF8D;
@@ -78,6 +79,7 @@
                 </div>
               </div>
             </div>
+            
         <div class="mt-5"></div>
 </div>
 
