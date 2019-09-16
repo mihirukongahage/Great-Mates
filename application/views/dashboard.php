@@ -88,11 +88,11 @@
                 </a>
                 </div>
                 <div class="cardContainer offset-1"> 
-                <a class="offset-1" href="<?=base_url('index.php/main/about')?>">
+                <a class="offset-1" href="<?=base_url('index.php/main/view')?>">
                     <div class="card" style="width: 20rem;">
                         <div class="card-body w3-hover-opacity">
                             <div class="text-center">
-                                <h2 class="card-text">About</h2>
+                                <h2 class="card-text">View</h2>
                                 <h6 class="card-subtitle mb-2 text-muted">Details</h6>
                             </div>
                         </div>

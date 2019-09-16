@@ -18,6 +18,9 @@
         .nav-link {
             color: #D5AF8B;
         }
+        .user{
+           background-color: rgba(0,0,0,0.2);
+        }
 </style>
   </head>
 
@@ -27,6 +30,11 @@
             <div class="greatmates text-center">
                 <div class="container mt-2">
                     <h1>Great Mates</h1>
+                    <div class="user mt-3">
+                      <hr>
+                      <h4><?= $username ?></h4>
+                      <hr>
+                    </div>
                 </div>
                 <div class="mt-5">
                     <a class="nav-link" href="<?=base_url('index.php/main/dashboard')?>">Dashboard<span class="sr-only">(current)</span></a>
@@ -37,6 +45,7 @@
                     <a class="nav-link" href="<?=base_url('index.php/main/annual_reports')?>">Annual Reports <span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?=base_url('index.php/main/view')?>">View <span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="<?=base_url('index.php/main/about')?>">About <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<?=base_url('index.php/main/logout')?>">Logout <span class="sr-only">(current)</span></a>
                 </div>
             </div>
           </div>
