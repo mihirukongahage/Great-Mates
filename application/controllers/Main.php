@@ -5,12 +5,14 @@ class Main extends CI_Controller {
 
     public function __construct()
     {
-    parent::__construct();
+    
+parent::__construct();
     
     $this->load->database();
     $this->load->helper('url');
     $this->load->helper('form');
     $this->load->library('form_validation');
+    $this->load->model('Connect');
     
     }
 
@@ -249,12 +251,16 @@ class Main extends CI_Controller {
 
     }
 
+    /*
+    View
+    */
+    public function view(){
 
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('view');
 
-
-
-
-
+    }
 
 
 
@@ -312,10 +318,8 @@ class Main extends CI_Controller {
             //Navbar 
             $data["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$data);
-            
-            $this->load->model('connect');
-            $p['services'] = $this->connect->get_service();        
-            $this->load->view('dashboard',$p);
+                
+            $this->load->view('dashboard');
 
         }
         else
@@ -346,94 +350,17 @@ class Main extends CI_Controller {
 
         $p["username"] = $this->session->userdata('username');
         $this->load->view('navbar',$p);
-
-        $this->load->model('connect');
-        $data['services'] = $this->connect->get_service();        
-        $this->load->view('dashboard',$data);
+       
+        $this->load->view('dashboard');
 
     }
 
-    /*
-
-    Add service
-
-    */ 
-    public function add_service(){
-
-        // Navbar
-        $p["username"] = $this->session->userdata('username');
-        $this->load->view('navbar',$p);
-
-        $this->load->model('connect');
-        $data['services'] = $this->connect->get_service();        
-        $this->load->view('dashboard',$data);
-
-    }
-
-    /*
-
-    Remove a service 
-    
-    */
-
-    public function remove_service(){
-        
-        $this->load->model('connect');
-        $id=$this->input->get('id');
-        if($this->connect->rem_service($id))
-        {
-            // Redirect to the dashboard
-            redirect(base_url()."index.php/main/enter");
-        }
-
-    }
-    /*
-
-    Direct to the edit_service view when Edit is clicked
-
-    */
-
-    public function edit_service(){
-
-        $p["username"] = $this->session->userdata('username');
-        $this->load->view('navbar',$p);
-
-        $this->load->model('connect');
-        $id=$this->input->get('id');
-        if($this->connect->ed_service($id))
-        {
-            $data['services'] = $this->connect->ed_service($id);        
-            $this->load->view('edit_service',$data);
-        }
-        
-    }
-    /*
-
-    Update an existing service
-
-    */
-
-    public function update_service()
-    {
-        $this->load->model('connect');        
-        if($this->input->post('save'))
-            {
-                $name = $this->input->post('servicename');
-                $price = $this->input->post('price');
-                $description = $this->input->post('description');
-                $id = $this->input->get('id');
-                $this->connect->update_service($name,$price,$description,$id);
-                // Redirect to dashboard
-                redirect(base_url()."index.php/main/enter");
-            }
-    }
 
     /*
 
     Signup form
 
     */
-
 
     public function signup()
     {
@@ -443,59 +370,32 @@ class Main extends CI_Controller {
     /*
 
     Signup validation and auth
-    To be completed...
-
+    
     */
-
     public function signup_validate()
     {
-        $this->form_validation->set_rules('fname', 'Firstname', 'required');
-        $this->form_validation->set_rules('lname', 'Lastname', 'required');
-        $this->form_validation->set_rules('username', 'Username', 'required');
-        $this->form_validation->set_rules('email', 'Email', 'required');
+        $this->form_validation->set_rules('username', 'username', 'required');
+        $this->form_validation->set_rules('office_id', 'OfficeId', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
         $this->form_validation->set_rules('cpassword', 'CPassword', 'required');
         
         if($this->input->post('save'))
         {
-            $fname = $this->input->post('fname');
-            $lname = $this->input->post('lname');
-            $uname = $this->input->post('uname');
-            $email = $this->input->post('email');
+            $username = $this->input->post('username');
+            $office_id = $this->input->post('office_id');
             $password = $this->input->post('password');
-            $isAdmin = 0;
-            $this->connect->sign_up($fname, $lname, $uname, $email, $password, $isAdmin);
-        }
-    }
-
-    /*
-
-    Add a new service 
-
-    */
-    public function addnewservice()
-    {
-        // Navbar
-        $p["username"] = $this->session->userdata('username');
-        $this->load->view('navbar',$p);
-
-        // add_new_service view
-        $this->load->view('add_new_service');
-        $this->load->model('connect');
-        $data = array(
-            "name" => $this->input->post("servicename"),
-            "price" => $this->input->post("price"),
-            "description" => $this->input->post("description")
-        );
-        if($data['name'] != NULL)
-        {
-            // If name available
-            $this->connect->add_service($data);
+            $isAdmin = 1;
+            $this->connect->sign_up($username, $office_id, $password);
         }
 
-
+        $data = array(    
+                    'username'     => $this->input->post('username'),
+                    'office_id'     => $this->input->post('office_id'),
+                    'password'     => $this->input->post('password'), 
+                    );   
+        $this->Connect->insert($data);
     }
-
+    
     
  }
 ?>

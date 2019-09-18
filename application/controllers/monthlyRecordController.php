@@ -27,7 +27,7 @@ class monthlyRecordController extends CI_Controller {
                 'expences'          =>$this->input->post('expences'),
                 'income'            =>$this->input->post('income'),
                 'year'              =>$this->input->post('year'), 
-                'month'              =>$this->input->post('month'), 
+                'month'             =>$this->input->post('month'), 
             );   
             $this->monthlyModel->cattleInsert($data);        
         }
@@ -129,7 +129,24 @@ class monthlyRecordController extends CI_Controller {
             $this->load->view('MonthlyReports/monthly_report_goat',$result); 
         } 
 //------------------------------------------------------------------------------------------------------------------------     
+     
+         
+        public function readFarms(){
+            
+            
+            if(($this->input->post('month')=='null')){
+                $month = "January";
+            }else{
+                $month =  $this->input->post('month');
+            } 
 
+            $result['registered']=$this->monthlyModel->goatRead($month);  
+            $result['submitted']=$this->monthlyModel->goatRead($month);   
+            $p["username"] = $this->session->userdata('username');
+            $this->load->view('navbar',$p);
+            $this->load->view('MonthlyReports/monthly_report_goat',$result); 
+
+        }
 
 
 

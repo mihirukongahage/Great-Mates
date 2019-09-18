@@ -1,4 +1,21 @@
-<?php include('partials/header.php')?>
+    <!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>    <style>
+    .logo{
+        width:25vw; 
+    }
+    
+    </style>       
+    </head>
+  <body>
     <div class="row mt-5">
     <div class="col col-sm-12 col-md-6 col-lg-4 offset-md-2 offset-lg-3">
         <div class="card login-card" style="width: 50rem"">
@@ -7,7 +24,7 @@
                     <div class="row">
 
                         <div class="left col-md-5 col-lg-3">
-                            <h2>Logo</h1>
+                                <img src=<?php echo base_url("assets/img/logo2.png")?>  class="logo" alt="logo" >
                             <p>Description</P>
 
                         </div>
@@ -19,8 +36,8 @@
                             <div class="mt-5">
                                 <form method="post" action="<?php echo base_url(); ?>index.php/main/signup_validate">
                                     <div class="form-group">
-                                        <label for="Name">Name</label>
-                                        <input type="text" name="name" class="form-control" id="name" placeholder="Name">
+                                        <label for="Name">Username</label>
+                                        <input type="text" name="username" class="form-control" id="username" placeholder="Name">
                                         <!-- <span class="text-danger"><?php echo form_error('name'); ?></span> -->
                                     </div>
                                     <div class="form-group">
@@ -30,7 +47,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="Password">Password</label>
-                                        <input type="text" name="password" class="form-control" id="password" placeholder="Enter Password">
+                                        <input type="password" name="password" class="form-control" id="password" placeholder="Enter Password">
                                         <!-- <span class="text-danger"><?php echo form_error('password'); ?></span> -->
                                     </div>
                                     <div class="form-group">
@@ -68,4 +85,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-<?php include('partials/footer.php')?>
+</body>
+</html>

@@ -9,7 +9,119 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
 
+    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+    <script type="text/javascript">
+    FusionCharts.ready(function() {
+  var myChart = new FusionCharts({
+    type: "dragcolumn2d",
+    renderAt: "chart-container",
+    width: "75%", height: "450",
+    dataFormat: "json",
+    dataSource: {
+      "chart": {
+        "caption": "Annual Report for Cattle",
+        "subCaption": "",
+        "numberPrefix": "Rs",
+        "numberSuffix": "",
+        "yaxismaxvalue": "100000",
+        "theme": "fusion",
+        "plotToolText": "<b>$label</b><br>$seriesName: <b>$dataValue</b>"
+      },
+      "categories": [{
+        "category": [{
+          "label": "Jan",
+          "fontItalic": "0"
+        }, {
+          "label": "Feb",
+          "fontItalic": "0"
+        }, {
+          "label": "Mar",
+          "fontItalic": "0"
+        },{
+          "label": "April",
+          "fontItalic": "0"
+        },{
+          "label": "May",
+          "fontItalic": "0"
+        },{
+          "label": "June",
+          "fontItalic": "0"
+        },{
+          "label": "July",
+          "fontItalic": "0"
+        },{
+          "label": "Aug",
+          "fontItalic": "0"
+        },{
+          "label": "Sep",
+          "fontItalic": "0"
+        },{
+          "label": "Auc",
+          "fontItalic": "0"
+        },{
+          "label": "Nov",
+          "fontItalic": "0"
+        },{
+          "label": "Dec",
+          "fontItalic": "0"
+        },]
+      }],
+      "dataset": [{
+        "seriesname": "Income",
+        "data": [
+           <?php 
+            foreach($data as $row){   
+                      echo "{
+                        'value': '".$row->Income."',
+                        'alpha': '100',
+                        'allowDrag': '0'
+                        },";
+            } 
+        ?> 
+          
+        {
+          "value": "110",
+          "toolText": "<b>$label</b><br>$seriesName: <b>$dataValue</b>"
+        }, {
+          "value": "180",
+          "toolText": "<b>$label</b><br>$seriesName: <b>$dataValue</b>"
+        }]
+      }, {
+        "seriesname": "Expenditure",
+        "data": [
+          
+         <?php 
+            foreach($data as $row){   
+                      echo "{
+                        'value': '".$row->Expences."',
+                        'alpha': '100',
+                        'allowDrag': '0'
+                        },";
+            } 
+        ?>  
+        {
+          "value": "99",
+          "toolText": "<b>$label</b><br>$seriesName: <b>$dataValue</b>"
+        }, {
+          "value": "150",
+          "toolText": "<b>$label</b><br>$seriesName: <b>$dataValue</b>"
+        }]
+      }]
+    },
+    "events": {
+    "dataplotDragEnd": function (ev, props) {
+    console.log(props);
+    var dataSet = props.datasetName;
+    var beforeVal = Math.round(props.startValue * 100) / 100;
+    var afterVal = Math.round(props.endValue * 100) / 100;
+    document.getElementById('info').innerHTML =  "<b>" + dataSet + "</b> is modified to <b>$" + afterVal + "M</b> from <b>$" + beforeVal + "M</b>";
+    }
+    }
+  }).render();
+});
+</script>
     <style>
     .card-body{
       background-color: #DAAF8D;
@@ -99,6 +211,9 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="mt-5">
+              <div id="chart-container">FusionCharts XT will load here!</div>
             </div>
         <div class="mt-5"></div>
 </div>

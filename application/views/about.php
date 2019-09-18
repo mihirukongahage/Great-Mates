@@ -1,4 +1,4 @@
-    <!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -10,28 +10,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
 
-    <style>
-    .card-body{
-      background-color: #DAAF8D;
-    }
+        <style>
+            .card-body{
+            background-color: #DAAF8D;
+            }
 
-    body{
-      background-color: 	#C8DFD9;
-    }
+            body{
+            background-color: 	#C8DFD9;
+            }
 
-    .card-body{
-      color: 	#0b2829;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-</style>
-
-
-  </head>
+            .card-body{
+            color: 	#0b2829;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+        </style>
+    </head>
   <body>
     <div class="section offset-4 offset-sm-3 offset-md-3">
       <h1>Annual Reports</h1>
       <h4 class="card-subtitle mb-2 text-muted"></h4>
-
         <div class="section">
             <div class="row">
                 <div class="cardContainer offset-1 w3-hover-sepia"> 

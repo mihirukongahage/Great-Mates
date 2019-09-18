@@ -5,9 +5,23 @@
         public function __construct(){
             parent::__construct();  
             $this->load->database(); 
-            $this->load->model('farmModel');  
+            $this->load->helper('url');
+            $this->load->model('farmModel');    
+            $this->load->database();  
+            $this->load->helper('form');
+            $this->load->library('form_validation');
+            $this->load->model('Connect');
+        
         }
         public function insert(){
+
+
+            if(empty($this->input->post('form_reg_no'))|| empty(($this->input->post('contact_no'))) || empty($this->input->post('address'))) {   
+                     redirect(base_url('index.php/main/new_farm')); 
+            }
+
+
+
             //creating stock type 
             $cattle = 0;
             $poultry  = 0;
@@ -36,6 +50,8 @@
                 'piggery'       => $piggery,
                 'goat'          => $goat   ,
                 'Name'          => $this->input->post('owner_name'), 
+                'month' => date("F")
+                
                 );   
 
                 if((empty($this->input->post('form_reg_no'))) || (empty($this->input->post('contact_no'))) | (empty($this->input->post('address')))){

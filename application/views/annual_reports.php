@@ -1,4 +1,4 @@
-    <!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -94,9 +94,9 @@
                 </a>
                 
                 </div>
-                <div class="cardContainer offset-3 w3-hover-sepia"> 
+                <div class="cardContainer offset-1 w3-hover-sepia"> 
                 <a class="offset-md-1" href="<?=base_url('index.php/annualController/breeding')?>">
-                    <div class="card cardContaine" style="width: 20rem;">
+                    <div class="card cardContaine" style="width: 18rem;">
                         <img src="../../assets/img/breeding.jpg" class="card-img-top" alt="goat" height="175">
                         <div class="card-body">
                             <div class="text-center">
