@@ -45,15 +45,22 @@
                 'regNo'         => $this->input->post('form_reg_no'),
                 'Phone'         => $this->input->post('contact_no'),
                 'Address'       => $this->input->post('address'), 
-                'cattle'   => $cattle ,
-                'poultry'  => $poultry,
-                'piggery'  => $piggery,
-                'goat'     => $goat   ,
+                'cattle'        => $cattle ,
+                'poultry'       => $poultry,
+                'piggery'       => $piggery,
+                'goat'          => $goat   ,
                 'Name'          => $this->input->post('owner_name'), 
                 'month' => date("F")
                 
                 );   
-                $this->farmModel->insert($data);       
+
+                if((empty($this->input->post('form_reg_no'))) || (empty($this->input->post('contact_no'))) | (empty($this->input->post('address')))){
+                    $this->load->helper('url');
+                    redirect("/main/new_farm");
+                }else{
+                    $this->farmModel->insert($data);  
+                }
+                    
         }
     }
 ?>
