@@ -36,12 +36,17 @@
         width:60%;
         margin:auto;
     }
+    .addClearButtonContainer {
+      left: 100px;
+      top: 150px;
+}
 
 </style>
 
 
   </head>
   <body>
+
     <div class="section offset-4 offset-sm-3 offset-md-3">
     <br>
       <h1>Monthly Records</h1>
@@ -114,14 +119,21 @@
                                         <input type="number" name="income" class="form-control" id="income" placeholder="Income">
                                         <!-- <span class="text-danger"><?php echo form_error('income'); ?></span> -->
                                     </div>
-                                    <div class="text-center">
-                                    <button type="submit" name="insert" class="btn btn-primary" name="save">Add</button>
+                                    
+                                    <input type="hidden" name="typeOf" value="cattle">
+                                     <div class="addClearButtonContainer">
+                                      <div class="text-center">
+                                      <div class="row p-4">
+                                      <div class="addButton"> <button type="submit" name="insert" class="btn btn-primary " name="save">Add</button> </div>&nbsp
+                                      <div class="clearButton"> <button type="reset" name="insert" class="btn btn-primary " name="clear">Clear</button> </div>
                                     <?php
                                         echo $this->session->flashdata("error"); 
                                     ?>
                                     </div>
-                                    <input type="hidden" name="typeOf" value="cattle">
+                                                </div>
+                                            </div>
                                 </form>   
+                                
         </div>
         </div>
         <div class="mt-5"></div>

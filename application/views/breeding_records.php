@@ -97,7 +97,9 @@
                                         <input type="number" name="code" class="form-control" id="semen_code" placeholder="Semen Code">
                                         <!-- <span class="text-danger"><?php echo form_error('semen_code'); ?></span> -->
                                     </div>
+                                    
                                     <button type="submit" name="insert" class="btn btn-primary" name="save">Add</button>
+                                    <div class="clearButton"> <button type="reset" name="insert" class="btn btn-primary " name="clear">Clear</button> </div>
                                     <?php
                                         echo $this->session->flashdata("error"); 
                                     ?>
@@ -105,6 +107,7 @@
                                     <input type="hidden" name="typeOf" value="cattle">
                                     
                                 </form>
+                                
         </div>
         <div class="mt-5"></div>
 

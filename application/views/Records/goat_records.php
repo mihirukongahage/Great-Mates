@@ -119,11 +119,17 @@
                                         <!-- <span class="text-danger"><?php echo form_error('income'); ?></span> -->
                                     </div>
                                     <div class="text-center">
-                                    <button type="submit" name="insert" class="btn btn-primary" name="save">Add</button>
+                                    <div class="addClearButtonContainer">
+                                      <div class="text-center">
+                                      <div class="row p-4">
+                                      <div class="addButton"> <button type="submit" name="insert" class="btn btn-primary " name="save">Add</button> </div>&nbsp
+                                      <div class="clearButton"> <button type="reset" name="insert" class="btn btn-primary " name="clear">Clear</button> </div>
                                     <?php
                                         echo $this->session->flashdata("error"); 
                                     ?>
                                     </div>
+                                                </div>
+                                            </div>
                                     <input type="hidden" name="typeOf" value="cattle">
                                 </form>   
         </div>
