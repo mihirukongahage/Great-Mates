@@ -5,27 +5,27 @@
         public function cattleInsert($data){
             $this->load->helper('url');
             $this->db->insert('cattlerecords',$data);
-            redirect("/main/enter");
+            redirect("/main/dashboard");
         }
 
         public function poultryInsert($data){
             $this->load->helper('url');
             $this->db->insert('poultryrecords',$data);
-            redirect("/main/enter");
+            redirect("/main/dashboard");
         }
 
         public function piggeryInsert($data){
             $this->load->helper('url');
             $this->db->insert('piggeryrecords',$data);
-            redirect("/main/enter");
+            redirect("/main/dashboard");
         }
         
         public function goatInsert($data){
             $this->load->helper('url');
             $this->db->insert('goatrecords',$data);
-            redirect("/main/enter");
+            redirect("/main/dashboard");
         }
-
+        
 //--------------------Read---------------------------------
         
         function cattlesRead($month){ 
