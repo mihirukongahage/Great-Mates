@@ -122,7 +122,7 @@ class monthlyRecordController extends CI_Controller {
             }else{
                 $month =  $this->input->post('month');
             } 
-
+ 
             $result['data']=$this->monthlyModel->goatRead($month);   
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
