@@ -47,7 +47,7 @@
           
                                     <div class="form-group">
                                         <label for="Farm_reg_no">Farm Registration Number</label>
-                                        <input type="text" width="5" name="form_reg_no" class="form-control" id="farm_reg_no" placeholder="Farm Registration Number">
+                                        <input type="text" width="5" name="farm_reg_no" class="form-control" id="farm_reg_no" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('faarm_reg_no'); ?></span> -->
                                     </div>
                                     <div class="checkBoxContainer">
@@ -59,7 +59,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="Year">Year</label>
-                                        <input class="date-own form-control" name="year" type="text" placeholder="Year">
+                                        <input class="date-own form-control" name="year" type="text" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('year'); ?></span> -->
                                         <script type="text/javascript">
                                         $('.date-own').datepicker({
@@ -73,7 +73,7 @@
                                     <div class="form-group"> 
                                     <label for="sel1">Select month:</label>
                                     <select class="form-control" id="sel1" name="month"  >
-                                      <option value="" selected disabled hidden>Choose here</option>
+                                      <option value="" selected disabled hidden>required</option>
                                       <option>January	    </option>
                                       <option>February	</option>
                                       <option>March	    </option>
@@ -94,7 +94,7 @@
 
                                     <div class="form-group">
                                         <label for="Semen_code">Semen Code</label>
-                                        <input type="number" name="code" class="form-control" id="semen_code" placeholder="Semen Code">
+                                        <input type="number" name="code" class="form-control" id="semen_code" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('semen_code'); ?></span> -->
                                     </div>
                                     

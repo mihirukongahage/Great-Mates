@@ -58,12 +58,12 @@
             <form method="post" action="<?php echo base_url('index.php/monthlyRecordController/insertPiggery');?>">
                                     <div class="form-group">
                                         <label for="Farm_reg_no">Farm Registration Number</label>
-                                        <input type="text" width="5" name="farm_reg_no" class="form-control" id="farm_reg_no" placeholder="Farm Registration Number">
+                                        <input type="text" width="5" name="farm_reg_no" class="form-control" id="farm_reg_no" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('faarm_reg_no'); ?></span> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="Year">Year</label>
-                                        <input class="date-own form-control" name="year" type="text" placeholder="Year">
+                                        <input class="date-own form-control" name="year" type="text" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('owner_name'); ?></span> -->
                                         <script type="text/javascript">
                                         $('.date-own').datepicker({
@@ -95,22 +95,22 @@
 
                                     <div class="form-group">
                                         <label for="No_of_animals">Number of Animals</label>
-                                        <input type="number" name="no_of_animals" class="form-control" id="no_of_animals" placeholder="Number of Animals">
+                                        <input type="number" name="no_of_animals" class="form-control" id="no_of_animals" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('no_of_animals'); ?></span> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="Meat_production">Meat Production(Kilograms)</label>
-                                        <input type="number" name="meat_production" class="form-control" id="meat_production" placeholder="Meat Production">
+                                        <input type="number" name="meat_production" class="form-control" id="meat_production" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('meat_production'); ?></span> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="Expences">Expences(LKR)</label>
-                                        <input type="number" name="expences" class="form-control" id="expences" placeholder="Expences">
+                                        <input type="number" name="expences" class="form-control" id="expences" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('expences'); ?></span> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="Meat_production">Income(LKR)</label>
-                                        <input type="number" name="income" class="form-control" id="income" placeholder="Income">
+                                        <input type="number" name="income" class="form-control" id="income" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('income'); ?></span> -->
                                     </div>
                                     <div class="addClearButtonContainer">

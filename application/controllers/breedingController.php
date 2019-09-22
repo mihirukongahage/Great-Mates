@@ -21,36 +21,33 @@ class breedingController extends CI_Controller {
         //Goat
         public function write(){ 
                 //creating stock type 
-                $cattle = 0;
-                $poultry  = 0;
-                $piggery  = 0;
+                $cattle = 0; 
                 $goat     = 0;
                 
                 if($this->input->post("cattle")=="on"){
-                     $cattle = 1;
+                    $cattle = 1;
                 }
-                if($this->input->post("poultry")=="on"){
-                    $poultry  = 1;
-                }
-                if($this->input->post("piggery")=="on"){
-                    $piggery  = 1;
-                }
+
                 if($this->input->post("goat")=="on"){
                     $goat  = 1;
                 } 
-                   
+                
+                $has_stock = $cattle + $goat;
+                
+                if(empty($this->input->post('farm_reg_no'))|| empty($this->input->post('code'))  || (!($has_stock))|| empty($this->input->post('year')) || empty($this->input->post('month'))) {   
+                   redirect(base_url('index.php/main/breeding_records')); 
+                }
+ 
                 $data = array(    
-                    'regNo'         => $this->input->post('form_reg_no'),
+                    'regNo'         => $this->input->post('farm_reg_no'),
                     'code'         => $this->input->post('code'),
-                    'year'       => $this->input->post('year'), 
+                    'year'        => $this->input->post('year'), 
                     'month'       => $this->input->post('month'), 
-                    'cattle'   => $cattle ,
-                    'poultry'  => $poultry,
-                    'piggery'  => $piggery,
+                    'cattle'   => $cattle , 
                     'goat'     => $goat   , 
-                    );   
-                    //print_r($data);
-                    $this->breedingModel->insert($data);       
+                    );    
+
+                   $this->breedingModel->insert($data);       
             }
 
 
