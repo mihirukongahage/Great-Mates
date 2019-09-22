@@ -374,11 +374,17 @@ parent::__construct();
     */
     public function signup_validate()
     {
+      
         $this->form_validation->set_rules('username', 'username', 'required');
         $this->form_validation->set_rules('office_id', 'OfficeId', 'required');
         $this->form_validation->set_rules('password', 'Password', 'required');
         $this->form_validation->set_rules('cpassword', 'CPassword', 'required');
         
+        if(empty($this->input->post('username'))|| empty(($this->input->post('office_id'))) || empty($this->input->post('password')) || ($this->input->post('password')!= $this->input->post('cpassword'))) {   
+            redirect(base_url('index.php/main/signup')); 
+        }
+
+
         if($this->input->post('save'))
         {
             $username = $this->input->post('username');
