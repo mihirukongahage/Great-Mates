@@ -58,7 +58,7 @@
             <form method="post" action="<?php echo base_url('index.php/monthlyRecordController/insertGoat');?>">
                                     <div class="form-group">
                                         <label for="Farm_reg_no">Farm Registration Number</label>
-                                        <input type="text" width="5" name="farm_reg_no" class="form-control" id="farm_reg_no" placeholder="Farm Registration Number">
+                                        <input type="text" width="5" name="farm_reg_no" class="form-control" id="farm_reg_no" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('faarm_reg_no'); ?></span> -->
                                     </div>
                                     <div class="form-group">
@@ -95,35 +95,41 @@
 
                                     <div class="form-group">
                                         <label for="No_of_animals">Number of Animals</label>
-                                        <input type="number" name="no_of_animals" class="form-control" id="no_of_animals" placeholder="Number of Animals">
+                                        <input type="number" name="no_of_animals" class="form-control" id="no_of_animals" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('no_of_animals'); ?></span> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="Amount_of_milk">Amount of Milk(Liters)</label>
-                                        <input type="number" name="amount_of_milk" class="form-control" id="amount_of_milk" placeholder="Amount of Milk">
+                                        <input type="number" name="amount_of_milk" class="form-control" id="amount_of_milk" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('amount_of_milk'); ?></span> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="Meat_production">Meat Production(Kilograms)</label>
-                                        <input type="number" name="meat_production" class="form-control" id="meat_production" placeholder="Meat Production">
+                                        <input type="number" name="meat_production" class="form-control" id="meat_production" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('meat_production'); ?></span> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="Expences">Expences(LKR)</label>
-                                        <input type="number" name="expences" class="form-control" id="expences" placeholder="Expences">
+                                        <input type="number" name="expences" class="form-control" id="expences" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('expences'); ?></span> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="Meat_production">Income(LKR)</label>
-                                        <input type="number" name="income" class="form-control" id="income" placeholder="Income">
+                                        <input type="number" name="income" class="form-control" id="income" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('income'); ?></span> -->
                                     </div>
                                     <div class="text-center">
-                                    <button type="submit" name="insert" class="btn btn-primary" name="save">Add</button>
+                                    <div class="addClearButtonContainer">
+                                      <div class="text-center">
+                                      <div class="row p-4">
+                                      <div class="addButton"> <button type="submit" name="insert" class="btn btn-primary " name="save">Add</button> </div>&nbsp
+                                      <div class="clearButton"> <button type="reset" name="insert" class="btn btn-primary " name="clear">Clear</button> </div>
                                     <?php
                                         echo $this->session->flashdata("error"); 
                                     ?>
                                     </div>
+                                                </div>
+                                            </div>
                                     <input type="hidden" name="typeOf" value="cattle">
                                 </form>   
         </div>
