@@ -95,27 +95,27 @@
 
                                     <div class="form-group">
                                         <label for="No_of_animals">Number of Animals</label>
-                                        <input type="number" name="no_of_animals" class="form-control" id="no_of_animals" placeholder="required">
+                                        <input type="number" min="0" name="no_of_animals" class="form-control" id="no_of_animals" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('no_of_animals'); ?></span> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="amount_of_milk">Amount of eggs</label>
-                                        <input type="number" name="amount_of_eggs" class="form-control" id="amount_of_milk" placeholder="required">
+                                        <input type="number" min="0" name="amount_of_eggs" class="form-control" id="amount_of_milk" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('amount_of_eggs'); ?></span> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="Meat_production">Meat Production(Kilograms)</label>
-                                        <input type="number" name="meat_production" class="form-control" id="meat_production" placeholder="required">
+                                        <input type="number" min="0" name="meat_production" class="form-control" id="meat_production" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('meat_production'); ?></span> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="Expences">Expences(LKR)</label>
-                                        <input type="number" name="expences" class="form-control" id="expences" placeholder="required">
+                                        <input type="number" min="0" name="expences" class="form-control" id="expences" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('expences'); ?></span> -->
                                     </div>
                                     <div class="form-group">
                                         <label for="Meat_production">Income(LKR)</label>
-                                        <input type="number" name="income" class="form-control" id="income" placeholder="required">
+                                        <input type="number" min="0" name="income" class="form-control" id="income" placeholder="required">
                                         <!-- <span class="text-danger"><?php echo form_error('income'); ?></span> -->
                                     </div>
                                     <div class="addClearButtonContainer">
