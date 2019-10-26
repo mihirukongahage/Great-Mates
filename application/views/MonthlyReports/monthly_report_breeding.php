@@ -38,6 +38,7 @@
       //margin:auto;
     }
     .button{
+      background-color: #106466;
       display:inline-block; 
     }
 </style>
@@ -45,8 +46,10 @@
   <body>
 
     <div class="section offset-4 offset-sm-3 offset-md-3">
+    <p>&nbsp;</p>
       <h1>Artificial breeding report</h1>
       <h4 class="card-subtitle mb-2 text-muted"> <?php if(isset($month)){echo $month." / ".date("Y");}?> </h4>
+      <hr>
         <div class="section mt-5">
         
         <div class="monthContainer">

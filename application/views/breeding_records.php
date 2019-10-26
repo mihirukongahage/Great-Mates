@@ -17,7 +17,7 @@
     
     <style>
     .card-body{
-      background-color: #DAAF8D;
+      background-color: #106466;
     }
 
     body{
@@ -32,6 +32,12 @@
       color: 	#0b2829;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+      .btnAdd{
+    background-color: 	#106466;
+  }
+  .btnClear{
+    background-color: 	#106466;
+  }
 </style>
 
 
@@ -39,12 +45,13 @@
   <body>
   <link rel="stylesheet" href="<?php echo base_url('assets/css/newFarm.css');?>">
     <div class="section offset-4 offset-sm-3 offset-md-3">
+    <p>&nbsp;</p>
       <h1>Breeding Records</h1>
       <h4 class="card-subtitle mb-2 text-muted">Artificial breeding records</h4>
-        <div class="section mt-5">
+        <hr>
+        <div class=" mt-5">
             
               <form  action="<?=base_url('index.php/breedingController/write'); ?>" method="post"> 
-          
                                     <div class="form-group">
                                         <label for="Farm_reg_no">Farm Registration Number</label>
                                         <input type="text" width="5" name="farm_reg_no" class="form-control" id="farm_reg_no" placeholder="required">
@@ -98,8 +105,8 @@
                                         <!-- <span class="text-danger"><?php echo form_error('semen_code'); ?></span> -->
                                     </div>
                                     
-                                    <button type="submit" name="insert" class="btn btn-primary" name="save">Add</button>
-                                    <div class="clearButton"> <button type="reset" name="insert" class="btn btn-primary " name="clear">Clear</button> </div>
+                                    <button type="submit" name="insert" class="btn btn-primary btnAdd" name="save">Add</button>
+                                    <div class="clearButton"> <button type="reset" name="insert" class="btn btn-primary btnClear" name="clear">Clear</button> </div>
                                     <?php
                                         echo $this->session->flashdata("error"); 
                                     ?>

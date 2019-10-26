@@ -38,6 +38,7 @@
       //margin:auto;
     }
     .button{
+      background-color: #106466;
       display:inline-block; 
     }
 </style>
@@ -70,8 +71,9 @@
         ?>
 
     <div class="section offset-4 offset-sm-3 offset-md-3">
+    <p>&nbsp;</p>
       <h1>View</h1>
-
+    <hr>
       <h4 class="card-subtitle mb-2 text-muted"><?php   if( !empty($month)){echo $month;} ?></h4>
       <h4 class="card-subtitle mb-2 text-muted">
       </h4>
@@ -101,7 +103,7 @@
                   </div>
                   
                                                    
-                     <input type="submit" value="Select" class="button">
+                     <input type="submit" value="Select" class="button btn btn-primary">
               </form>
               </div>
   

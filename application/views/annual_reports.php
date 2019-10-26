@@ -12,7 +12,7 @@
 
     <style>
     .card-body{
-      background-color: #DAAF8D;
+      background-color: #106466;
     }
 
     body{
@@ -27,15 +27,19 @@
       color: 	#0b2829;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+    h2{
+        color: 	white;
+    }
 </style>
 
 
   </head>
   <body>
     <div class="section offset-4 offset-sm-3 offset-md-3">
+    <p>&nbsp;</p>
       <h1>Annual Reports</h1>
       <h4 class="card-subtitle mb-2 text-muted"></h4>
-
+    <hr>
         <div class="section">
             <div class="row">
                 <div class="cardContainer offset-1 w3-hover-sepia"> 
