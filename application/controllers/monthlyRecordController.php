@@ -45,14 +45,16 @@ class monthlyRecordController extends CI_Controller {
         }
 
         public function readCattles(){ 
-            
+  
             if(($this->input->post('month')==='null')){
                 $month = "January";
+                $year = 2019;
             }else{
                 $month =  $this->input->post('month');
+                $year =  $this->input->post('year');
             } 
 
-            $result['data']=$this->monthlyModel->cattlesRead($month);   
+            $result['data']=$this->monthlyModel->cattlesRead($month,$year);     
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('MonthlyReports/monthly_report_cattle',$result); 
@@ -85,13 +87,16 @@ class monthlyRecordController extends CI_Controller {
 
         public function readPoultry(){ 
             
+            
             if(($this->input->post('month')==='null')){
                 $month = "January";
+                $year = 2019;
             }else{
                 $month =  $this->input->post('month');
+                $year =  $this->input->post('year');
             } 
 
-            $result['data']=$this->monthlyModel->poultryRead($month);   
+            $result['data']=$this->monthlyModel->poultryRead($month,$year);     
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('MonthlyReports/monthly_report_poultry',$result); 
@@ -125,11 +130,13 @@ class monthlyRecordController extends CI_Controller {
             
             if(($this->input->post('month')==='null')){
                 $month = "January";
+                $year = 2019;
             }else{
                 $month =  $this->input->post('month');
+                $year =  $this->input->post('year');
             } 
 
-            $result['data']=$this->monthlyModel->piggeryRead($month);   
+            $result['data']=$this->monthlyModel->piggeryRead($month,$year);   
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('MonthlyReports/monthly_report_piggery',$result); 
@@ -161,13 +168,15 @@ class monthlyRecordController extends CI_Controller {
 
         public function readGoat(){ 
             
-            if(($this->input->post('month')=='null')){
+            if(($this->input->post('month')==='null')){
                 $month = "January";
+                $year = 2019;
             }else{
                 $month =  $this->input->post('month');
+                $year =  $this->input->post('year');
             } 
 
-            $result['data']=$this->monthlyModel->goatRead($month);   
+            $result['data']=$this->monthlyModel->goatRead($month,$year);   
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('MonthlyReports/monthly_report_goat',$result); 

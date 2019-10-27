@@ -42,23 +42,23 @@
         
 //--------------------Read---------------------------------
         
-        function cattlesRead($month){ 
-            $query = $this->db->get_where('cattlerecords', array('month' => $month , 'year' =>date("Y")));
+        function cattlesRead($month,$year){ 
+            $query = $this->db->get_where('cattlerecords', array('month' => $month , 'year' => $year));
             return $query->result();
         }
                 
-        function poultryRead($month){ 
-            $query = $this->db->get_where('poultryrecords', array('month' => $month , 'year' =>date("Y")));
+        function poultryRead($month,$year){ 
+            $query = $this->db->get_where('poultryrecords', array('month' => $month , 'year' => $year));
             return $query->result();
         }
                 
-        function piggeryRead($month){ 
-            $query = $this->db->get_where('piggeryrecords', array('month' => $month , 'year' =>date("Y")));
+        function piggeryRead($month,$year){ 
+            $query = $this->db->get_where('piggeryrecords', array('month' => $month , 'year' => $year));
             return $query->result();
         }
                 
-        function goatRead($month){ 
-            $query = $this->db->get_where('goatrecords', array('month' => $month , 'year' =>date("Y")));
+        function goatRead($month,$year){ 
+            $query = $this->db->get_where('goatrecords', array('month' => $month , 'year' => $year));
             return $query->result();
         }
 
