@@ -262,6 +262,17 @@ parent::__construct();
 
     }
 
+     /*
+    Farm Locations
+    */
+    public function farm_locations(){
+
+        $p["username"] = $this->session->userdata('username');
+        $this->load->view('navbar',$p);
+        $this->load->view('farmLocations');
+
+    }
+
 
 
     /*

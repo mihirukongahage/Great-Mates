@@ -12,7 +12,7 @@
 
     <style>
     .card-body{
-      background-color: #DAAF8D;
+      background-color: #106466;
     }
 
     body{
@@ -27,13 +27,20 @@
       color: 	#0b2829;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+    h2{
+        color: 	white;
+    }
 </style>
 
 
   </head>
   <body>
-    <div class="section offset-4 offset-sm-3 offset-md-3">
+    <div class="section offset-4 offset-sm-3 offset-md-4">
+    <p>&nbsp;</p>
+    <div class="section offset-4 offset-sm-1 offset-md-1">
       <h1>Monthly Records</h1>
+      </div>
+      <hr>
       <h4 class="card-subtitle mb-2 text-muted"></h4>
 
         <div class="section">

@@ -227,7 +227,6 @@
 
         <input type="submit" value="Select" class="button">
         </form>
-
         <div class="section mt-5">
           <?php
           $animals = 0;
