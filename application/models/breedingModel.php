@@ -3,8 +3,12 @@
 //---------------------Insert---------------------------
        public function insert($data){
            $this->load->helper('url');
-           $this->db->insert('breedingrecords',$data);
-           redirect("/main/enter");
+           $this->db->insert('breedingrecords',$data); 
+           $result['message']  = "succsess";
+           $p["username"] = $this->session->userdata('username');
+           $this->load->view('navbar',$p);
+           $this->load->view('breeding_records',$result);
+           
        }
 
 
