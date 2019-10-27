@@ -55,11 +55,13 @@ class breedingController extends CI_Controller {
             
             if(($this->input->post('month')=='null')){
                 $month = "January";
+                $year = "2019";
             }else{
                 $month =  $this->input->post('month');
+                $year =  $this->input->post('year');
             } 
 
-            $result['data']=$this->breedingModel->Monthlyread($month);
+            $result['data']=$this->breedingModel->Monthlyread($month,$year);
             $result['month']=$month;   
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);

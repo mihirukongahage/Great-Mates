@@ -10,8 +10,8 @@
 
 //--------------------Read---------------------------------
        
-       function Monthlyread($month){ 
-           $query = $this->db->get_where('breedingrecords', array('month' => $month , 'year' =>date("Y")));
+       function Monthlyread($month,$year){ 
+           $query = $this->db->get_where('breedingrecords', array('month' => $month , 'year' =>$year));
            return $query->result();
        }
     }
