@@ -4,26 +4,40 @@
  //---------------------Insert---------------------------
         public function cattleInsert($data){
             $this->load->helper('url');
-            $this->db->insert('cattlerecords',$data);
-            redirect("/main/dashboard");
+            $this->db->insert('cattlerecords',$data); 
+            
+            $result['message']  = "succsess";
+            $p["username"] = $this->session->userdata('username');
+            $this->load->view('navbar',$p);
+            $this->load->view('Records/cattle_records',$result); 
+   
         }
 
         public function poultryInsert($data){
             $this->load->helper('url');
-            $this->db->insert('poultryrecords',$data);
-            redirect("/main/dashboard");
+            $this->db->insert('poultryrecords',$data); 
+            $result['message']  = "succsess";
+            $p["username"] = $this->session->userdata('username');
+            $this->load->view('navbar',$p);
+            $this->load->view('Records/poultry_records',$result); 
         }
 
         public function piggeryInsert($data){
             $this->load->helper('url');
             $this->db->insert('piggeryrecords',$data);
-            redirect("/main/dashboard");
+            $result['message']  = "succsess";
+            $p["username"] = $this->session->userdata('username');
+            $this->load->view('navbar',$p);
+            $this->load->view('Records/piggery_records',$result); 
         }
         
         public function goatInsert($data){
             $this->load->helper('url');
             $this->db->insert('goatrecords',$data);
-            redirect("/main/dashboard");
+            $result['message']  = "succsess";
+            $p["username"] = $this->session->userdata('username');
+            $this->load->view('navbar',$p);
+            $this->load->view('Records/goat_records',$result);  
         }
         
 //--------------------Read---------------------------------

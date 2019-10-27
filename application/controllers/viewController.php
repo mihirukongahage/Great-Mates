@@ -36,7 +36,7 @@
 
 
             //print_r($result['cattle']) ;
-            $this->load->view('view',$result);
+           $this->load->view('view',$result); 
         } 
     
 
