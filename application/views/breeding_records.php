@@ -21,7 +21,7 @@
     }
 
     body{
-      background-color: 	#C8DFD9;
+      background-image: url("./../../assets/img/background4.jpg");
     }
 
     a:hover{
@@ -44,13 +44,12 @@
   </head>
   <body>
   <link rel="stylesheet" href="<?php echo base_url('assets/css/newFarm.css');?>">
-    <div class="section offset-4 offset-sm-3 offset-md-3">
+    <div class="section offset-6 offset-sm-4 offset-md-4 offset-lg-3 offset-xl-3">
     <p>&nbsp;</p>
       <h1>Breeding Records</h1>
       <h4 class="card-subtitle mb-2 text-muted">Artificial breeding records</h4>
         <hr>
         <div class=" mt-5">
-            
               <form  action="<?=base_url('index.php/breedingController/write'); ?>" method="post"> 
                                     <div class="form-group">
                                         <label for="Farm_reg_no">Farm Registration Number</label>

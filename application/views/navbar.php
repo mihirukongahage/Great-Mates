@@ -22,42 +22,33 @@
         .user{
            background-color: rgba(0,0,0,0.2);
         }
+        .logo{
+        width:100%; 
+    }
 
 </style>
   </head>
 
   <body>
     <div class="wrapper">
-          <div class="w3-sidebar w3-bar-block" style="width:18%">
+          <div class="w3-sidebar w3-bar-block" style="width:20%">
             <div class="greatmates">
-                <div class="container mt-2 text-center">
-                <p>&nbsp;</p>
-                    <h1>Great Mates</h1>
-                    <p>&nbsp;</p>
-                    <div class="user mt-3">
+              <img class="logo" src=<?php echo base_url("assets/img/logo2.png")?> alt="logo" >
+                <div class="container text-center">
+                    <div class="user">
                       <hr>
                       <h4><?= $username ?></h4>
                       <hr>
                     </div>
                 </div>
-
-                  <div class="mt-3"></div>
                     <a class="nav-link" href="<?=base_url('index.php/main/dashboard')?>"><i class="fas fa-tachometer-alt" style="font-size: 25px;"></i> Dashboard<span class="sr-only">(current)</span></a>
-                  <div class="mt-3"></div>
                     <a class="nav-link" href="<?=base_url('index.php/main/new_farm')?>"><i class="fas fa-tractor" style="font-size: 25px;"></i> New Farm <span class="sr-only">(current)</span></a>
-                  <div class="mt-3"></div>
                     <a class="nav-link" href="<?=base_url('index.php/main/monthly_records')?>"><i class="fas fa-clipboard" style="font-size: 25px;"></i> Monthly Records <span class="sr-only">(current)</span></a>
-                  <div class="mt-3"></div>
                     <a class="nav-link" href="<?=base_url('index.php/main/breeding_records')?>"><i class="fas fa-clipboard" style="font-size: 25px;"></i> Breeding Records <span class="sr-only">(current)</span></a>
-                  <div class="mt-3"></div>
                     <a class="nav-link" href="<?=base_url('index.php/main/monthly_reports')?>"><i class="fas fa-sticky-note" style="font-size: 25px;"></i> Monthly Reports <span class="sr-only">(current)</span></a>
-                  <div class="mt-3"></div>
                     <a class="nav-link" href="<?=base_url('index.php/main/annual_reports')?>"><i class="fas fa-sticky-note" style="font-size: 25px;"></i> Annual Reports <span class="sr-only">(current)</span></a>
-                  <div class="mt-3"></div>
                     <a class="nav-link" href="<?=base_url('index.php/main/view')?>"><i class="fas fa-eye" style="font-size: 25px;"></i> View <span class="sr-only">(current)</span></a>
-                  <div class="mt-3"></div>
                     <a class="nav-link" href="<?=base_url('index.php/main/about')?>"><i class="fas fa-user-alt" style="font-size: 25px;"></i> About <span class="sr-only">(current)</span></a>
-                  <div class="mt-3"></div>
                     <a class="nav-link" href="<?=base_url('index.php/main/logout')?>"><i class="fas fa-sign-out-alt" style="font-size: 25px;"></i> Logout <span class="sr-only">(current)</span></a>
 
             </div>
