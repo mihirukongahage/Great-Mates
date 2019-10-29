@@ -153,17 +153,19 @@
 
 
 
-      <div class='section mt-5'>
+      <div class='section mt-5 offset-4 offset-sm-3 offset-md-3'>
         <div class="card card-plain w-75 p-1">
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-hover">
                 <tbody>
                   <tr>
-                    <th>Category</td>
-                    <th>Registered</td>
-                    <th>Submitted</td>
-                    <th>Not Submitted</td>
+                    <th>FarmId</td>
+                    <th>No.of Animals</td>
+                    <th>Milk</td>
+                    <th>Meat</td>
+                    <th>Year and Month</td>
+                    <th>Expenditure</td>
                   </tr>
                   <tr>
                     <td>
@@ -174,6 +176,12 @@
                     </td>
                     <td>
                       <?= $submittedCattle ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
                     </td>
                     <td>
                       <?= $registeredCattle - $submittedCattle ?>
@@ -192,6 +200,12 @@
                     <td>
                       <?= $registeredGoat - $submittedGoat ?>
                     </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
                   </tr>
                   <tr>
                     <td>
@@ -206,6 +220,12 @@
                     <td>
                       <?= $registeredPiggery - $submittedPiggery ?>
                     </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
                   </tr>
                   <tr>
                     <td>
@@ -219,6 +239,12 @@
                     </td>
                     <td>
                       <?= $registeredPoultry - $submittedPoultry ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
                     </td>
                   </tr>
                 </tbody>
