@@ -64,7 +64,7 @@
 
         ?>
         <div class="section mt-5" style="margin-top:10px!important;">
-
+<div class="container" style="width:800px">
           <form action="<?= base_url('index.php/breedingController/write'); ?>" method="post">
             <div class="form-group">
               <label for="Farm_reg_no">Farm Registration Number</label>
@@ -141,7 +141,7 @@
         <input type="hidden" name="typeOf" value="cattle">
 
         </form>
-
+        </div>
       </div>
       <div class="mt-5"></div>
 
