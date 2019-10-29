@@ -16,8 +16,8 @@
       background-color: #DAAF8D;
     }
 
-    body {
-      background-color: #C8DFD9;
+    body{
+      background-image: url("./../../assets/img/background4.jpg");
     }
 
     a:hover {

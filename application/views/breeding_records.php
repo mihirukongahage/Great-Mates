@@ -17,30 +17,28 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
 
       <style>
-        .card-body {
-          background-color: #106466;
-        }
+    .card-body{
+      background-color: #106466;
+    }
 
-        body {
-          background-color: #C8DFD9;
-        }
+    body{
+      background-image: url("./../../assets/img/background4.jpg");
+    }
 
-        a:hover {
-          text-decoration: none;
-        }
-
-        .card-body {
-          color: #0b2829;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-
-        .btnAdd {
-          background-color: #106466;
-        }
-
-        .btnClear {
-          background-color: #106466;
-        }
+    a:hover{
+        text-decoration: none;
+    }
+    
+    .card-body{
+      color: 	#0b2829;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+      .btnAdd{
+    background-color: 	#106466;
+  }
+  .btnClear{
+    background-color: 	#106466;
+  }
       </style>
 
 
@@ -141,6 +139,7 @@
         <input type="hidden" name="typeOf" value="cattle">
 
         </form>
+
         </div>
       </div>
       <div class="mt-5"></div>

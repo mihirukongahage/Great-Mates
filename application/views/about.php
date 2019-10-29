@@ -11,12 +11,15 @@
     <script src="https://code.highcharts.com/highcharts.src.js"></script>
 
         <style>
+          .logo{
+              width:25vw; 
+            }
             .card-body{
             background-color: #DAAF8D;
             }
 
             body{
-            background-color: 	#C8DFD9;
+            background-image: url("./../../assets/img/background4.jpg");
             }
 
             .card-body{
@@ -30,6 +33,16 @@
     <p>&nbsp;</p>
       <h1>About</h1>
       <hr>
+      <p>&nbsp;</p>
+      <div class="logo">
+        <img class="logo responsive" src=<?php echo base_url("assets/img/logo2.png")?> alt="logo" >
+      </div>
+      <h5>This web application provides assistance for daily field operation.<br>
+        The main objective of this web application is to improve the productivity<br> of
+        the division and increase the efficacy of daily operations.<br>
+        The web application and mobile application are linked together you can use mobile application in field.<br>
+        By using this application Insertion,<br>
+        updating and deletion of livestock management data can be done more efficiently.</h5>
         <div class="mt-5"></div>
 
    

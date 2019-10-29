@@ -14,15 +14,16 @@
     <style>
     .card-body{
       background-color: #2A3634;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+    .card{
+        background: rgba(11, 40, 41, 0.1) !important
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    } 
 
     body{
-      background-color: 	#C8DFD9;
-    }
-
-    .card-body{
-      color: 	#0b2829;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      /* background-color: 	#C8DFD9; */
+      background-image: url("./../../assets/img/background4.jpg");
     }
     h2{
         color: 	white;
@@ -31,6 +32,7 @@
     {
         color: 	white;
     }
+
 </style>
 
   </head>
