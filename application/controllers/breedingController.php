@@ -34,32 +34,38 @@ class breedingController extends CI_Controller {
                 
                 $has_stock = $cattle + $goat;
                 
-                if(empty($this->input->post('farm_reg_no'))|| empty($this->input->post('code'))  || (!($has_stock))|| empty($this->input->post('year')) || empty($this->input->post('month'))) {   
-                   redirect(base_url('index.php/main/breeding_records')); 
-                }
+                if(empty($this->input->post('farm_reg_no'))|| empty($this->input->post('date'))  || empty($this->input->post('code'))  || (!($has_stock))|| empty($this->input->post('year')) || empty($this->input->post('month'))) {   
+                    $result['message']  = "error";
+                    $p["username"] = $this->session->userdata('username');
+                    $this->load->view('navbar',$p);
+                    $this->load->view('breeding_records',$result); 
+                }else{
  
                 $data = array(    
                     'regNo'         => $this->input->post('farm_reg_no'),
                     'code'         => $this->input->post('code'),
                     'year'        => $this->input->post('year'), 
                     'month'       => $this->input->post('month'), 
+                    'date'       => $this->input->post('date'), 
                     'cattle'   => $cattle , 
                     'goat'     => $goat   , 
                     );    
 
                    $this->breedingModel->insert($data);       
             }
-
+        }
 
         public function read(){ 
             
             if(($this->input->post('month')=='null')){
                 $month = "January";
+                $year = "2019";
             }else{
                 $month =  $this->input->post('month');
+                $year =  $this->input->post('year');
             } 
 
-            $result['data']=$this->breedingModel->Monthlyread($month);
+            $result['data']=$this->breedingModel->Monthlyread($month,$year);
             $result['month']=$month;   
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
@@ -75,6 +81,3 @@ class breedingController extends CI_Controller {
             echo "This is index of breedingController";
         }
     }
-?>
-
-    

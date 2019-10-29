@@ -38,51 +38,63 @@
       //margin:auto;
     }
     .button{
-      background-color: #106466;
       display:inline-block; 
     }
 </style>
   </head>
   <body>
     <div class="section offset-4 offset-sm-3 offset-md-3">
-    <p>&nbsp;</p>
       <h1>Monthly report for piggery</h1>
       <h4 class="card-subtitle mb-2 text-muted">Production report</h4>
       <h4 class="card-subtitle mb-2 text-muted">
-      <?= date("Y");?> 
-      <?php  
-            if (isset($data)){foreach($data as $row){ echo "/".$row->month ;}} 
-      ?>
+  
       </h4>
-      <hr>
         <div class="section mt-5">
 
-<div class="monthContainer">
+ 
               <form  action="<?=base_url('index.php/monthlyRecordController/readPiggery'); ?>" method="post"> 
-              <div class="form-group"> 
-                    <label for="sel1">Select month:</label>
-                    <select class="form-control" id="sel1" name="month"  >
-                      <option value="" selected disabled hidden>Choose here</option>
-                      <option>January	    </option>
-                      <option>February	</option>
-                      <option>March	    </option>
-                      <option>April	    </option>
-                      <option>May	   	    </option>
-                      <option>June	    </option>
-                      <option>July	    </option>
-                      <option>August	    </option>
-                      <option>September	</option>
-                      <option>October	    </option>
-                      <option>November	</option>
-                      <option>December	</option>
-                    </select>
-                    
-                  <!-- <span class="text-danger"><?php echo form_error('month'); ?></span> -->  
-                  </div>
-                  </div>
-                                                   
-                     <input type="submit" value="Select" class="button btn btn-primary">
-              </form>
+              <div class="form-group">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <label for="sel1">Select year:</label>
+                <select class="form-control" id="sel1" name="year">
+                  <option value="" selected disabled hidden>Choose here</option>
+                  <option>2013 </option>
+                  <option>2014 </option>
+                  <option>2015 </option>
+                  <option>2016 </option>
+                  <option>2017 </option>
+                  <option>2018 </option>
+                  <option>2019 </option>
+                </select>
+              </div>
+              <div class="col-sm-3">
+
+                <label for="sel2">Select month:</label>
+                <select class="form-control" id="sel1" name="month">
+                  <option value="" selected disabled hidden>Choose here</option>
+                  <option>January </option>
+                  <option>February </option>
+                  <option>March </option>
+                  <option>April </option>
+                  <option>May </option>
+                  <option>June </option>
+                  <option>July </option>
+                  <option>August </option>
+                  <option>September </option>
+                  <option>October </option>
+                  <option>November </option>
+                  <option>December </option>
+                </select>
+
+              </div>
+           <div class="col-sm-3">  <input type="submit" value="Select" class="button" style="margin-top: 34px;"></div>
+
+       </div>
+          </div>
+        </div>
+      </form>
  
 
               <?php

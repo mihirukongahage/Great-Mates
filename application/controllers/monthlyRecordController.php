@@ -23,9 +23,12 @@ class monthlyRecordController extends CI_Controller {
 
 
             if(empty($this->input->post('farm_reg_no'))|| empty(($this->input->post('no_of_animals'))) || empty($this->input->post('amount_of_milk')) || empty($this->input->post('meat_production')) || empty($this->input->post('expences')) || empty($this->input->post('income')) || empty($this->input->post('year')) || empty($this->input->post('month'))) {   
-                redirect(base_url('index.php/main/cattle_records')); 
-            }
-
+                $result['message']  = "error";
+                $p["username"] = $this->session->userdata('username');
+                $this->load->view('navbar',$p);
+                $this->load->view('Records/cattle_records',$result); 
+            }else{
+ 
             $data = array(     
                 'regNo'             =>$this->input->post('farm_reg_no'),
                 'no_of_animals'     =>$this->input->post('no_of_animals'),
@@ -34,24 +37,24 @@ class monthlyRecordController extends CI_Controller {
                 'expences'          =>$this->input->post('expences'),
                 'income'            =>$this->input->post('income'),
                 'year'              =>$this->input->post('year'), 
-                'month'             =>$this->input->post('month'), 
+                'month'             =>$this->input->post('month'),  
             );   
             
-
-
-            //print_r($data);
-            $this->monthlyModel->cattleInsert($data);        
+            $this->monthlyModel->cattleInsert($data);     
+            }    
         }
 
         public function readCattles(){ 
-            
+  
             if(($this->input->post('month')==='null')){
                 $month = "January";
+                $year = 2019;
             }else{
                 $month =  $this->input->post('month');
+                $year =  $this->input->post('year');
             } 
 
-            $result['data']=$this->monthlyModel->cattlesRead($month);   
+            $result['data']=$this->monthlyModel->cattlesRead($month,$year);     
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('MonthlyReports/monthly_report_cattle',$result); 
@@ -62,8 +65,11 @@ class monthlyRecordController extends CI_Controller {
 
         
             if(empty($this->input->post('farm_reg_no'))|| empty(($this->input->post('no_of_animals'))) || empty($this->input->post('amount_of_eggs')) || empty($this->input->post('meat_production')) || empty($this->input->post('expences')) || empty($this->input->post('income')) || empty($this->input->post('year')) || empty($this->input->post('month'))) {   
-                redirect(base_url('index.php/main/poultry_records')); 
-            }
+                $result['message']  = "error";
+                $p["username"] = $this->session->userdata('username');
+                $this->load->view('navbar',$p);
+                $this->load->view('Records/poultry_records',$result); 
+            }else{
 
             $data = array(     
                 'regNo'             =>$this->input->post('farm_reg_no'),
@@ -77,16 +83,20 @@ class monthlyRecordController extends CI_Controller {
             );   
             $this->monthlyModel->poultryInsert($data);        
         }
+    }
 
         public function readPoultry(){ 
             
+            
             if(($this->input->post('month')==='null')){
                 $month = "January";
+                $year = 2019;
             }else{
                 $month =  $this->input->post('month');
+                $year =  $this->input->post('year');
             } 
 
-            $result['data']=$this->monthlyModel->poultryRead($month);   
+            $result['data']=$this->monthlyModel->poultryRead($month,$year);     
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('MonthlyReports/monthly_report_poultry',$result); 
@@ -96,8 +106,12 @@ class monthlyRecordController extends CI_Controller {
         public function insertPiggery(){
             
             if(empty($this->input->post('farm_reg_no'))|| empty(($this->input->post('no_of_animals'))) || empty($this->input->post('meat_production')) || empty($this->input->post('expences')) || empty($this->input->post('income')) || empty($this->input->post('year')) || empty($this->input->post('month'))) {   
-                redirect(base_url('index.php/main/piggery_records')); 
-            }
+                $result['message']  = "error";
+                $p["username"] = $this->session->userdata('username');
+                $this->load->view('navbar',$p);
+                $this->load->view('Records/piggery_records',$result); 
+            }else{
+             
             
             $data = array(     
                 'regNo'             =>$this->input->post('farm_reg_no'),
@@ -108,18 +122,21 @@ class monthlyRecordController extends CI_Controller {
                 'year'              =>$this->input->post('year'), 
                 'month'              =>$this->input->post('month'), 
             );   
-            $this->monthlyModel->piggeryInsert($data);        
+            $this->monthlyModel->piggeryInsert($data);  
+        }      
         }
 
         public function readPiggery(){ 
             
             if(($this->input->post('month')==='null')){
                 $month = "January";
+                $year = 2019;
             }else{
                 $month =  $this->input->post('month');
+                $year =  $this->input->post('year');
             } 
 
-            $result['data']=$this->monthlyModel->piggeryRead($month);   
+            $result['data']=$this->monthlyModel->piggeryRead($month,$year);   
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('MonthlyReports/monthly_report_piggery',$result); 
@@ -128,9 +145,12 @@ class monthlyRecordController extends CI_Controller {
         //Goat
         public function insertGoat(){
               
-            if(empty($this->input->post('farm_reg_no'))|| empty(($this->input->post('no_of_animals'))) || empty($this->input->post('meat_production')) || empty($this->input->post('expences')) || empty($this->input->post('income')) || empty($this->input->post('year')) || empty($this->input->post('month'))) {   
-                redirect(base_url('index.php/main/goat_records')); 
-            }
+            if(empty($this->input->post('farm_reg_no'))|| empty(($this->input->post('no_of_animals'))) || empty($this->input->post('amount_of_milk')) || empty($this->input->post('meat_production')) || empty($this->input->post('expences')) || empty($this->input->post('income')) || empty($this->input->post('year')) || empty($this->input->post('month'))) {   
+                $result['message']  = "error";
+                $p["username"] = $this->session->userdata('username');
+                $this->load->view('navbar',$p);
+                $this->load->view('Records/goat_records',$result); 
+            }else{
             
             $data = array(     
                 'regNo'             =>$this->input->post('farm_reg_no'),
@@ -140,20 +160,23 @@ class monthlyRecordController extends CI_Controller {
                 'income'            =>$this->input->post('income'),
                 'year'              =>$this->input->post('year'), 
                 'month'             =>$this->input->post('month'), 
+                'amount_of_milk'             =>$this->input->post('amount_of_milk'),
             );  
             $this->monthlyModel->goatInsert($data);        
         }
-        
+    }
 
         public function readGoat(){ 
             
-            if(($this->input->post('month')=='null')){
+            if(($this->input->post('month')==='null')){
                 $month = "January";
+                $year = 2019;
             }else{
                 $month =  $this->input->post('month');
+                $year =  $this->input->post('year');
             } 
 
-            $result['data']=$this->monthlyModel->goatRead($month);   
+            $result['data']=$this->monthlyModel->goatRead($month,$year);   
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('MonthlyReports/monthly_report_goat',$result); 

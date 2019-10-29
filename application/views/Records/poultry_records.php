@@ -50,9 +50,16 @@
     <br>
       <h1>Monthly Records</h1>
       <h4 class="card-subtitle mb-2 text-muted">Poultry records for the month</h4>
-
-        <div class="section mt-5">
-
+      <?php
+        if (!empty($message)) {
+          if ($message == "succsess") {
+            echo " <div class='container'><div class='row'> <div class='col-sm-4' style='margin:auto;margin-top:10px!important'><div class='alert alert-success' role='alert'> Record insesrted succesfully ! </div></div></div> </div>  ";
+          } else if ($message == "error") {
+            echo " <div class='container'><div class='row'> <div class='col-sm-4' style='margin:auto;margin-top:10px!important'><div class='alert alert-danger' role='alert'> Record insesrtion is not successfull ! </div></div> </div></div>  ";
+          }
+        } ?>
+        
+        <div class="section mt-5" style="margin-top:10px!important;">
         <div class="formContainer">
         
             <form method="post" action="<?php echo base_url('index.php/monthlyRecordController/insertPoultry');?>">

@@ -72,7 +72,15 @@
                                     <div class="form-group">
                                         <label class="labelAlignment">Address</label>
                                         <div class="textBoxAlignment">
-                                            <input type="text" name="address" class="form-control" id="address" placeholder="Address">
+                                            <input type="text" name="address1" class="form-control" id="address" placeholder="Address line 1">
+                                            <!-- <span class="text-danger"><?php echo form_error('address'); ?></span> -->
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                         
+                                        <div class="textBoxAlignment">
+                                            <input type="text" name="address2" class="form-control" id="address" placeholder="Address line 2">
                                             <!-- <span class="text-danger"><?php echo form_error('address'); ?></span> -->
                                         </div>
                                     </div>
