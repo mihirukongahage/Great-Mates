@@ -19,7 +19,7 @@
   }
 
   body{
-    background-image: url("./../../assets/img/background4.jpg");
+    background-color: 	#C8DFD9;
   }
 
   a:hover{
