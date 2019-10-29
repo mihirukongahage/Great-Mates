@@ -17,31 +17,30 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
 
       <style>
-        .card-body {
-          background-color: #DAAF8D;
-        }
+    .card-body{
+      background-color: #DAAF8D;
+    }
 
-        body {
-          background-color: #C8DFD9;
-        }
+    body{
+      background-image: url("./../../assets/img/background4.jpg");
+    }
 
-        .card-body {
-          color: #0b2829;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-
-        .czard-body {
-          color: #0b2829;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-
-
-        .formContainer {
-          position: relative;
-          top: 50px;
-          width: 60%;
-          margin: auto;
-        }
+    .card-body{
+      color: 	#0b2829;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .czard-body{
+      color: 	#0b2829;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+     
+    .formContainer{
+        position:relative;
+        top:50px;
+        width:60%;
+        margin:auto;
+    }
       </style>
 
 
