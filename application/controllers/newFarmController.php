@@ -44,7 +44,7 @@
             $data = array(    
                 'regNo'         => $this->input->post('form_reg_no'),
                 'Phone'         => $this->input->post('contact_no'),
-                'Address'       => $this->input->post('address1')." ".$this->input->post('address2'), , 
+                'Address'       => $this->input->post('address1')." ".$this->input->post('address2'),
                 'cattle'        => $cattle ,
                 'poultry'       => $poultry,
                 'piggery'       => $piggery,

@@ -16,7 +16,6 @@
     }
     body{
         background-image: url("./../../assets/img/background4.jpg");
-        background-repeat: repeat-y;
     }
     .card{
         background: rgba(11, 40, 41, 0.7);

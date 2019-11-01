@@ -53,6 +53,9 @@
   </div>
   <div class="container mt-5">
 
+    <?php
+      echo $data
+    ?>
 
     <div id="map"></div>
     <script>
