@@ -2,30 +2,23 @@
     class viewModel extends CI_Model{
 
 
-       function registeredFarmsCattle($month){
-            $query = $this->db->get_where('farms', array('month' => $month ,'cattle' => 1));
+       function readFarms($month,$category){ 
+        
+        
+            if($category=="Cattle"){
+                $query = $this->db->get_where('farms', array('month' => $month ,'cattle' => 1));
+            }else if($category=="Poultry"){
+                $query = $this->db->get_where('farms', array('month' => $month ,'poultry' => 1));
+            }else if($category=="Piggery"){
+                $query = $this->db->get_where('farms', array('month' => $month ,'piggery' => 1));
+            }else if($category=="Goat"){
+                $query = $this->db->get_where('farms', array('month' => $month ,'goat' => 1));
+            }
             return $query->result();
-
+              
        }
-
-       function registeredFarmsPoultry($month){
-            $query = $this->db->get_where('farms', array('month' => $month ,'poultry' => 1));
-            return $query->result();
-
-       }
-
-       function registeredFarmsPiggery($month){
-            $query = $this->db->get_where('farms', array('month' => $month ,'piggery' =>1 ));
-            return $query->result();
-
-       }
-
-       function registeredFarmsGoat($month){
-            $query = $this->db->get_where('farms', array('month' => $month ,'goat' => 1 ));
-            return $query->result();
-
-       }
-
+ 
+  
 //--------------------Read registered farms for the month---------------------------------
         
         function cattlesRead($month){ 

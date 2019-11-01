@@ -140,103 +140,61 @@
                 <div class="col-sm-3"><input type="submit" value="Select" class="button btn btn-primary" style="margin-top: 30px;"></div>
               </div>
             </div>
-
-
-
-            <!-- <span class="text-danger"><?php echo form_error('month'); ?></span> -->
+ 
           </div>
 
 
-                                            </div>
+          </div>
         </form>
       </div>
 
 
+<div class="container" style="margin:auto">
+<div class='section mt-5'>
+  
+ 
 
-      <div class='section mt-5'>
-        <div class="card card-plain w-75 p-1">
+  <div style="text-align:center ;"> <h2> <?= $type ?> / <?= $month ?></h2> </div>
+  </div>
+
+
+      <div  style="width:600px; margin:auto">
           <div class="card-body">
             <div class="table-responsive">
+        
               <table class="table table-hover">
                 <tbody>
                   <tr>
-                    <th>Category</td>
-                    <th>Registered</td>
-                    <th>Submitted</td>
-                    <th>Not Submitted</td>
+                    <th>Farm Id</th>
+                    <th>No of animals </th>
+                    <th>Milk</th>
+                    <th>Meat</th>
+                    <th>Date</th> 
+                    <th>Expences</th>
                   </tr>
-                  <tr>
-                    <td>
-                      Cattle
-                    </td>
-                    <td>
-                      <?= $registeredCattle ?>
-                    </td>
-                    <td>
-                      <?= $submittedCattle ?>
-                    </td>
-                    <td>
-                      <?= $registeredCattle - $submittedCattle ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Goat
-                    </td>
-                    <td>
-                      <?= $registeredGoat ?>
-                    </td>
-                    <td>
-                      <?= $submittedGoat ?>
-                    </td>
-                    <td>
-                      <?= $registeredGoat - $submittedGoat ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Piggery
-                    </td>
-                    <td>
-                      <?= $registeredPiggery ?>
-                    </td>
-                    <td>
-                      <?= $submittedPiggery ?>
-                    </td>
-                    <td>
-                      <?= $registeredPiggery - $submittedPiggery ?>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      Poultry
-                    </td>
-                    <td>
-                      <?= $registeredPoultry ?>
-                    </td>
-                    <td>
-                      <?= $submittedPoultry ?>
-                    </td>
-                    <td>
-                      <?= $registeredPoultry - $submittedPoultry ?>
-                    </td>
-                  </tr>
+ 
+
+                  <?php
+                        $array = json_decode(json_encode($data), True);
+                        foreach ($array  as $value){ 
+                          echo "<tr>";
+                          echo "<td>".$value['ID']."</td>";
+                          echo "<td>".$value['Phone']."</td>";
+                          echo "<td>".$value['Address']."</td>";
+                          echo "<td>".$value['Name']."</td>";
+                          echo "<td>".$value['ID']."</td>";
+                          echo "</tr>";
+                        }
+                  ?>  
                 </tbody>
               </table>
             </div>
-          </div>
-        </div>
+          </div> 
       </div>
 
+      </div> 
 
-
-      <div class="mt-5"></div>
-
-
-
-
-
-
+ 
 
 
       <!-- Optional JavaScript -->
