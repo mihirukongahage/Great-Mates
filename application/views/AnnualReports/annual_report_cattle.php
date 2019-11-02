@@ -171,6 +171,9 @@
           width:200px;
           display: inline-block; 
         }
+        .btnSelect{
+      background-color: 	#106466;
+    }
       </style>
     </head>
 
@@ -181,17 +184,12 @@
         <br>
         <br>
 
-
-  
-       
         <div class="monthContainer">
           <form action="<?= base_url('index.php/annualController/readCattles'); ?>" method="post">
           <div class="form-group">
           <div class="select">  
               <label for="sel1">Select year:</label>
-              
-              
-                
+
               <select class="form-control"  name="year">
                 <option value="2019" selected >2019</option>
                 <option>2018 </option>
@@ -225,7 +223,7 @@
             </div>
         </div>
 
-        <input type="submit" value="Select" class="button">
+        <input type="submit" value="Select" class="btn btn-primary btnSelect">
         </form>
         <div class="section mt-5">
           <?php

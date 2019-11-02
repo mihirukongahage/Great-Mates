@@ -158,19 +158,105 @@
   </div>
 
 
+
       <div  style="width:600px; margin:auto">
+
+      <div class='section mt-5 offset-4 offset-sm-3 offset-md-3'>
+        <div class="card card-plain w-75 p-1">
+
           <div class="card-body">
             <div class="table-responsive">
         
               <table class="table table-hover">
                 <tbody>
                   <tr>
-                    <th>Farm Id</th>
-                    <th>No of animals </th>
-                    <th>Milk</th>
-                    <th>Meat</th>
-                    <th>Date</th> 
-                    <th>Expences</th>
+
+                    <th>FarmId</td>
+                    <th>No.of Animals</td>
+                    <th>Milk</td>
+                    <th>Meat</td>
+                    <th>Year and Month</td>
+                    <th>Expenditure</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Cattle
+                    </td>
+                    <td>
+                      <?= $registeredCattle ?>
+                    </td>
+                    <td>
+                      <?= $submittedCattle ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Goat
+                    </td>
+                    <td>
+                      <?= $registeredGoat ?>
+                    </td>
+                    <td>
+                      <?= $submittedGoat ?>
+                    </td>
+                    <td>
+                      <?= $registeredGoat - $submittedGoat ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Piggery
+                    </td>
+                    <td>
+                      <?= $registeredPiggery ?>
+                    </td>
+                    <td>
+                      <?= $submittedPiggery ?>
+                    </td>
+                    <td>
+                      <?= $registeredPiggery - $submittedPiggery ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Poultry
+                    </td>
+                    <td>
+                      <?= $registeredPoultry ?>
+                    </td>
+                    <td>
+                      <?= $submittedPoultry ?>
+                    </td>
+                    <td>
+                      <?= $registeredPoultry - $submittedPoultry ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
+                    <td>
+                      <?= $registeredCattle - $submittedCattle ?>
+                    </td>
                   </tr>
  
 

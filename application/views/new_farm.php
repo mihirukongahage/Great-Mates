@@ -19,7 +19,7 @@
   }
 
   body{
-    background-color: 	#C8DFD9;
+    background-image: url("./../../assets/img/background4.jpg");
   }
 
   a:hover{
@@ -46,16 +46,6 @@
         <h5 class="card-subtitle mb-2 text-muted offset-1">Enter Farm Details</h5>
         <hr>
             <div class=" offset-1 mt-5">
-            <?php
-        if (!empty($message)) {
-          if ($message == "succsess") {
-            echo " <div class='container'><div class='row'> <div class='col-sm-4' style='margin:auto;margin-top:10px!important'><div class='alert alert-success' role='alert'> Record insesrted succesfully ! </div></div></div> </div>  ";
-          } else if ($message == "error") {
-            echo " <div class='container'><div class='row'> <div class='col-sm-4' style='margin:auto;margin-top:10px!important'><div class='alert alert-danger' role='alert'> Record insesrtion is not successfull ! </div></div> </div></div>  ";
-          }
-        }
-
-        ?>
                                 <form method="post" action="<?php echo base_url('index.php/newFarmController/insert/'); ?>">
                                     <div class="form-group">
                                         <label class="labelAlignment">Form Registration Number</label>

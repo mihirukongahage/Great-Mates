@@ -267,10 +267,13 @@ parent::__construct();
     */
     public function farm_locations(){
 
+        $this->load->database();
+        $this->load->model('locationModel');
+        $data['loc'] = $this->locationModel->getLocation();
+
         $p["username"] = $this->session->userdata('username');
         $this->load->view('navbar',$p);
-        $this->load->view('farmLocations');
-
+        $this->load->view('farmLocations',$data);
     }
 
 
@@ -412,7 +415,6 @@ parent::__construct();
                     );   
         $this->Connect->insert($data);
     }
-    
-    
+
  }
 ?>
