@@ -1,12 +1,11 @@
 <?php class locationModel extends CI_Model{
-
-
-//--------------------Read---------------------------------
-       
+ 
        function getLocation(){ 
-           //$this->load->database();
-           $query = $this->db->get('location');
+           $this->load->helper('url');  
+           $query = $this->db->get_where('location');
            return $query->result();
-       }
+       } 
+       
     }
 ?>
+ 
