@@ -53,7 +53,12 @@
   </div>
   <div class="container mt-5">
 
-
+  <?php 
+  foreach($data as $row){
+    print_r($row);
+    echo "<br>";
+  }
+?>
     <div id="map"></div>
     <script>
       var map;
@@ -62,6 +67,9 @@
           center: {lat: 7.8731, lng: 80.7718},
           zoom: 8
         });
+
+
+
         marker = new google.maps.Marker({
           position: {lat: 6.909, lng: 79.93},
           map: map

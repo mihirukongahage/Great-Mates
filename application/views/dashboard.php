@@ -112,7 +112,7 @@
                 </a>
                 </div>
                 <div class="cardContainer offset-1"> 
-                <a class="offset-1" href="<?=base_url('index.php/main/farm_locations')?>">
+                <a class="offset-1" href="<?=base_url('index.php/locationController/readLocations')?>">
                     <div class="card" style="width: 20rem;">
                         <div class="card-body w3-hover-opacity">
                             <div class="text-center">
