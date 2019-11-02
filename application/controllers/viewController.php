@@ -14,29 +14,34 @@
 
 
        public function read(){ 
-            if(($this->input->post('month')==='null')){
+            if(empty($this->input->post('month'))){
                 $month = "January";
             }else{
                 $month =  $this->input->post('month');
             } 
 
-            $result['cattle']  =$this->viewModel->registeredFarmsCattle($month);  
-            $result['cattle1'] =$this->viewModel->cattlesRead($month);  
-            $result['poultry']  =$this->viewModel->registeredFarmsPoultry($month);  
-            $result['poultry1'] =$this->viewModel->poultryRead($month); 
-            $result['piggery']  =$this->viewModel->registeredFarmsPiggery($month);  
-            $result['piggery1'] =$this->viewModel->piggeryRead($month); 
-            $result['goat']  =$this->viewModel->registeredFarmsGoat($month);  
-            $result['goat1'] =$this->viewModel->goatRead($month);  
+
+            if(empty($this->input->post('category'))){
+                $category = "cattle";
+            }else{
+                $category =  $this->input->post('category');
+            } 
+
+            
+            $result['data']  =$this->viewModel->readFarms($month, $category);
+            $result['month']  = $month ;
+            $result['type']  =  $category ;
+              
+                
+                
+ 
  
             //$p["username"] = $this->session->userdata('username');
             //$this->load->view('new_farm',$result); 
             $p["username"] = $this->session->userdata('username');
-            $this->load->view('navbar',$p);
-
-
-            //print_r($result['cattle']) ;
-           $this->load->view('view',$result); 
+          
+            $this->load->view('navbar',$p); 
+            $this->load->view('view',$result);   
         } 
     
 

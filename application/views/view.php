@@ -140,26 +140,37 @@
                 <div class="col-sm-3"><input type="submit" value="Select" class="button btn btn-primary" style="margin-top: 30px;"></div>
               </div>
             </div>
-
-
-
-            <!-- <span class="text-danger"><?php echo form_error('month'); ?></span> -->
+ 
           </div>
 
 
-                                            </div>
+          </div>
         </form>
       </div>
 
 
+<div class="container" style="margin:auto">
+<div class='section mt-5'>
+  
+ 
+
+  <div style="text-align:center ;"> <h2> <?= $type ?> / <?= $month ?></h2> </div>
+  </div>
+
+
+
+      <div  style="width:600px; margin:auto">
 
       <div class='section mt-5 offset-4 offset-sm-3 offset-md-3'>
         <div class="card card-plain w-75 p-1">
+
           <div class="card-body">
             <div class="table-responsive">
+        
               <table class="table table-hover">
                 <tbody>
                   <tr>
+
                     <th>FarmId</td>
                     <th>No.of Animals</td>
                     <th>Milk</td>
@@ -247,22 +258,29 @@
                       <?= $registeredCattle - $submittedCattle ?>
                     </td>
                   </tr>
+ 
+
+                  <?php
+                        $array = json_decode(json_encode($data), True);
+                        foreach ($array  as $value){ 
+                          echo "<tr>";
+                          echo "<td>".$value['ID']."</td>";
+                          echo "<td>".$value['Phone']."</td>";
+                          echo "<td>".$value['Address']."</td>";
+                          echo "<td>".$value['Name']."</td>";
+                          echo "<td>".$value['ID']."</td>";
+                          echo "</tr>";
+                        }
+                  ?>  
                 </tbody>
               </table>
             </div>
-          </div>
-        </div>
+          </div> 
       </div>
 
+      </div> 
 
-
-      <div class="mt-5"></div>
-
-
-
-
-
-
+ 
 
 
       <!-- Optional JavaScript -->
