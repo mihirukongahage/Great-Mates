@@ -145,56 +145,37 @@
   <body>
     <div class="section offset-4 offset-sm-3 offset-md-3">
     <p>&nbsp;</p>
-      <h1>Annual report for goat</h1>
-      <h4 class="card-subtitle mb-2 text-muted">Production report</h4>
-      <br>
+      <h1>Annual report for goat</h1>  
+      <?php if(empty($year)){$year = 2019;}?>
+        <h4 class="card-subtitle mb-2 text-muted"> <?= $year ?></h4>
+        <br>
         <br>
 
 
-       
-        <div class="monthContainer">
-          <form action="<?= base_url('index.php/annualController/readGoat'); ?>" method="post">
-          <div class="form-group">
-          <div class="select">  
-              <label for="sel1">Select year:</label>
-              
-              
-                
-              <select class="form-control"  name="year">
-                <option value="2019" selected >2019</option>
-                <option>2018 </option>
-                <option>2017 </option>
-                <option>2016 </option>
-                <option>2015 </option>
-                <option>2014 </option>
-                <option>2013 </option>
-              </select>
-          </div> 
 
-              <div class="select">
-              <label for="sel1">Select month:</label>
-              <select class="form-control" name="month">
-                <option value="January" selected  >January</option>
-                <option>January </option>
-                <option>February </option>
-                <option>March </option>
-                <option>April </option>
-                <option>May </option>
-                <option>June </option>
-                <option>July </option>
-                <option>August </option>
-                <option>September </option>
-                <option>October </option>
-                <option>November </option>
-                <option>December </option>
-              </select>
- 
-      </div>
-            </div>
+
+        <form action="<?= base_url('index.php/annualController/readGoat'); ?>" method="post">
+          <div class="container" style="padding-bottom:20px;">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="sel1">Select year:</label>
+                <select class="form-control" name="year">
+                  <option value="2019" selected>2019</option>
+                  <option>2018 </option>
+                  <option>2017 </option>
+                  <option>2016 </option>
+                  <option>2015 </option>
+                  <option>2014 </option>
+                  <option>2013 </option>
+                </select>
+
+              </div>
+              <div class="col-md-4">
+                <input type="submit" value="Select" class="button" style="margin-top: 32px;"></div> 
+        </form>
+        </div>
         </div>
 
-        <input type="submit" value="Select" class="button">
-        </form>
 
 
         <div class="section mt-5">

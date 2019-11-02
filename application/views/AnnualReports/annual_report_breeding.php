@@ -34,11 +34,33 @@
     <div class="section offset-4 offset-sm-3 offset-md-3">
     <p>&nbsp;</p>
       <h1>Artificial breeding report</h1>
-      <h4 class="card-subtitle mb-2 text-muted"><?= date("Y")?></h4>
+       
+      <h4 class="card-subtitle mb-2 text-muted"><?= $year ?></h4>
       <hr>
         <div class="section mt-5">
         
- 
+        <form action="<?= base_url('index.php/annualController/readBreeding'); ?>" method="post">
+          <div class="container" style="padding-bottom:20px;">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="sel1">Select year:</label>
+                <select class="form-control" name="year">
+                  <option value="2019" selected>Select year</option>
+                  <option>2019 </option>
+                  <option>2018 </option>
+                  <option>2017 </option>
+                  <option>2016 </option>
+                  <option>2015 </option>
+                  <option>2014 </option>
+                  <option>2013 </option>
+                </select>
+
+              </div>
+              <div class="col-md-4">
+                <input type="submit" value="Select" class="button" style="margin-top: 32px;"></div> 
+        </form>
+        </div>
+        </div>
               <div class="card card-plain w-75 p-1">
                 <div class="card-body">
                   <div class="table-responsive">
@@ -71,6 +93,7 @@
                                   echo "<td>".$row->regNo."</td>";
                                   echo "<td>".$type."</td>"; 
                                   echo "<td>". $row->code."</td>";  
+                                  echo "<td>". $row->year."</td>";   
                                 }  
                         ?>  
  

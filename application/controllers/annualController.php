@@ -17,16 +17,16 @@ class annualController extends CI_Controller {
 //----------------------------------------------------------------------------------------------------------------------
         //cattle 
         public function cattle(){ 
-            $result['data']=$this->annualModel->cattles("2019","January");   
+            $result['data']=$this->annualModel->cattles("2019" );   
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('AnnualReports/annual_report_cattle',$result); 
         } 
 
         public function readCattles(){ 
-            $year = $this->input->post('year');
-            $month = $this->input->post('month');
-            $result['data']=$this->annualModel->cattles( $year, $month);   
+            $year = $this->input->post('year'); 
+            $result['data']=$this->annualModel->cattles( $year ); 
+            $result['year']= $year  ;      
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('AnnualReports/annual_report_cattle',$result);  
@@ -34,16 +34,16 @@ class annualController extends CI_Controller {
 //------------------------------------------------------------------------------------------------------------------------
         //Poultry
         public function poultry(){ 
-            $result['data']=$this->annualModel->poultry("2019","January");   
+            $result['data']=$this->annualModel->poultry("2019" );   
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('AnnualReports/annual_report_poultry',$result); 
         }
         
         public function readPoultry(){ 
-            $year = $this->input->post('year');
-            $month = $this->input->post('month');
-            $result['data']=$this->annualModel->poultry( $year, $month);   
+            $year = $this->input->post('year'); 
+            $result['data']=$this->annualModel->poultry( $year ); 
+            $result['year']= $year  ;      
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('AnnualReports/annual_report_poultry',$result); 
@@ -51,16 +51,16 @@ class annualController extends CI_Controller {
 //------------------------------------------------------------------------------------------------------------------------
         //Piggery
         public function piggery(){ 
-            $result['data']=$this->annualModel->piggery("2019","January");   
+            $result['data']=$this->annualModel->piggery("2019" );   
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('AnnualReports/annual_report_piggery',$result); 
         }
         
         public function readPiggery(){ 
-            $year = $this->input->post('year');
-            $month = $this->input->post('month');
-            $result['data']=$this->annualModel->piggery( $year, $month);   
+            $year = $this->input->post('year'); 
+            $result['data']=$this->annualModel->piggery( $year ); 
+            $result['year']= $year  ;     
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('AnnualReports/annual_report_piggery',$result); 
@@ -68,16 +68,16 @@ class annualController extends CI_Controller {
 //------------------------------------------------------------------------------------------------------------------------        
         //Goat
         public function goat(){ 
-            $result['data']=$this->annualModel->goat("2019","January");   
+            $result['data']=$this->annualModel->goat("2019" );   
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('AnnualReports/annual_report_goat',$result); 
         }
         
         public function readGoat(){ 
-            $year = $this->input->post('year');
-            $month = $this->input->post('month');
-            $result['data']=$this->annualModel->goat( $year, '###');   
+            $year = $this->input->post('year'); 
+            $result['data']=$this->annualModel->goat( $year ); 
+            $result['year']= $year  ;    
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('AnnualReports/annual_report_goat',$result);   
@@ -85,18 +85,18 @@ class annualController extends CI_Controller {
 //------------------------------------------------------------------------------------------------------------------------    
         //Breading
         public function breeding(){ 
-            $result['data']=$this->annualModel->breed("2019","January");   
+            $result['data']=$this->annualModel->breed("2019" );   
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
             $this->load->view('AnnualReports/annual_report_breeding',$result); 
         } 
         public function readBreeding(){ 
-            $year = $this->input->post('year');
-            $month = $this->input->post('month');
-            $result['data']=$this->annualModel->breed( $year, $month);   
+            $year = $this->input->post('year'); 
+            $result['data']=$this->annualModel->breed( $year ); 
+            $result['year']= $year  ;   
             $p["username"] = $this->session->userdata('username');
             $this->load->view('navbar',$p);
-            $this->load->view('AnnualReports/annual_report_breeding',$result); 
+            $this->load->view('AnnualReports/annual_report_breeding',$result ); 
         } 
 //------------------------------------------------------------------------------------------------------------------------     
 

@@ -145,10 +145,38 @@
   <body>
     <div class="section offset-4 offset-sm-3 offset-md-3">
     <p>&nbsp;</p>
-      <h1>Annual report for poultry</h1>
-      <h4 class="card-subtitle mb-2 text-muted">Production report</h4>
-      <h4 class="card-subtitle mb-2 text-muted"><?= date("Y")?></h4>
-      <hr>
+      <h1>Annual report for poultry</h1> 
+      <?php if(empty($year)){$year = 2019;}?>
+        <h4 class="card-subtitle mb-2 text-muted"> <?= $year ?></h4>
+        <br>
+        <br>
+
+
+
+
+        <form action="<?= base_url('index.php/annualController/readPoultry'); ?>" method="post">
+          <div class="container" style="padding-bottom:20px;">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="sel1">Select year:</label>
+                <select class="form-control" name="year">
+                  <option value="2019" selected>2019</option>
+                  <option>2018 </option>
+                  <option>2017 </option>
+                  <option>2016 </option>
+                  <option>2015 </option>
+                  <option>2014 </option>
+                  <option>2013 </option>
+                </select>
+
+              </div>
+              <div class="col-md-4">
+                <input type="submit" value="Select" class="button" style="margin-top: 32px;"></div> 
+        </form>
+        </div>
+        </div>
+
+
         <div class="section mt-5">
 
         <?php

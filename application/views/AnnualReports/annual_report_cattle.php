@@ -125,30 +125,22 @@
           }).render();
         });
       </script>
-      <style> 
- 
- 
- 
-
- .monthContainer {
+      <style>
+        .monthContainer {
           width: 410px;
-          display: inline-block;  
+          display: inline-block;
         }
 
 
-        .select{
+        .select {
           width: 200px;
           display: inline-block;
         }
 
-        .form {
-          color: red;
-          width: 400px;
-          //margin:auto;
-        }
+
 
         .button {
-          display: inline-block;
+          // display: inline-block;
         }
 
         .card-body {
@@ -167,136 +159,120 @@
           color: #0b2829;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
-        .select{
-          width:200px;
-          display: inline-block; 
+
+        .select {
+          width: 200px;
+          display: inline-block;
         }
       </style>
     </head>
 
     <body>
       <div class="section offset-4 offset-sm-3 offset-md-3">
-        <h1>Annual report for cattle</h1>
-        <h4 class="card-subtitle mb-2 text-muted">Production report</h4> 
+        <h1>Annual report for cattle</h1><?php if(empty($year)){$year = 2019;}?>
+        <h4 class="card-subtitle mb-2 text-muted"> <?= $year ?></h4>
         <br>
         <br>
 
 
-  
-       
-        <div class="monthContainer">
-          <form action="<?= base_url('index.php/annualController/readCattles'); ?>" method="post">
-          <div class="form-group">
-          <div class="select">  
-              <label for="sel1">Select year:</label>
-              
-              
-                
-              <select class="form-control"  name="year">
-                <option value="2019" selected >2019</option>
-                <option>2018 </option>
-                <option>2017 </option>
-                <option>2016 </option>
-                <option>2015 </option>
-                <option>2014 </option>
-                <option>2013 </option>
-              </select>
-          </div> 
 
-              <div class="select">
-              <label for="sel1">Select month:</label>
-              <select class="form-control" name="month">
-                <option value="January" selected  >January</option>
-                <option>January </option>
-                <option>February </option>
-                <option>March </option>
-                <option>April </option>
-                <option>May </option>
-                <option>June </option>
-                <option>July </option>
-                <option>August </option>
-                <option>September </option>
-                <option>October </option>
-                <option>November </option>
-                <option>December </option>
-              </select>
- 
-      </div>
-            </div>
+
+        <form action="<?= base_url('index.php/annualController/readCattles'); ?>" method="post">
+          <div class="container" style="padding-bottom:20px;">
+            <div class="row">
+              <div class="col-md-4">
+                <label for="sel1">Select year:</label>
+                <select class="form-control" name="year">
+                  <option value="2019" selected>2019</option>
+                  <option>2018 </option>
+                  <option>2017 </option>
+                  <option>2016 </option>
+                  <option>2015 </option>
+                  <option>2014 </option>
+                  <option>2013 </option>
+                </select>
+
+              </div>
+              <div class="col-md-4">
+                <input type="submit" value="Select" class="button" style="margin-top: 32px;"></div> 
+        </form>
+        </div>
         </div>
 
-        <input type="submit" value="Select" class="button">
-        </form>
-        <div class="section mt-5">
-          <?php
-          $animals = 0;
-          $meat_production   = 0;
-          $Expences          = 0;
-          $Income            = 0;
-          $milk            = 0;
-          foreach ($data as $row) {
-            $animals = $animals + $row->no_of_animals;
-            $meat_production =   $meat_production + $row->meat_production;
-            $Expences = $Expences  + $row->Expences;
-            $milk = $milk  + $row->amount_of_milk;
-            $Income   = $Income    + $row->Income;
-          }
-          ?>
-          <div class="card card-plain w-75 p-1">
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-hover">
-                  <tbody>
-                    <tr>
-                      <td>
-                        Number of animals in the area
-                      </td>
-                      <td>
-                        <?= $animals ?>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Milk Production
-                      </td>
-                      <td>
-                        <?= $milk ?> liters
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        Meat Production
-                      </td>
-                      <td>
-                        <?= $meat_production ?> kilograms
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        This year expences for cattle farming
-                      </td>
-                      <td>
-                        <?= $Expences ?> lkr
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        This year income from cattle farming
-                      </td>
-                      <td>
-                        <?= $Income ?> lkr
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+
+
+
+
+      <div class="section mt-5">
+        <?php
+        $animals = 0;
+        $meat_production   = 0;
+        $Expences          = 0;
+        $Income            = 0;
+        $milk            = 0;
+        foreach ($data as $row) {
+          $animals = $animals + $row->no_of_animals;
+          $meat_production =   $meat_production + $row->meat_production;
+          $Expences = $Expences  + $row->Expences;
+          $milk = $milk  + $row->amount_of_milk;
+          $Income   = $Income    + $row->Income;
+        }
+        ?>
+        <div class="card card-plain w-75 p-1">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <tbody>
+                  <tr>
+                    <td>
+                      Number of animals in the area
+                    </td>
+                    <td>
+                      <?= $animals ?>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Milk Production
+                    </td>
+                    <td>
+                      <?= $milk ?> liters
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Meat Production
+                    </td>
+                    <td>
+                      <?= $meat_production ?> kilograms
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      This year expences for cattle farming
+                    </td>
+                    <td>
+                      <?= $Expences ?> lkr
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      This year income from cattle farming
+                    </td>
+                    <td>
+                      <?= $Income ?> lkr
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
-        <div class="mt-5">
-          <div id="chart-container">FusionCharts XT will load here!</div>
-        </div>
-        <div class="mt-5"></div>
+      </div>
+      <div class="mt-5">
+        <div id="chart-container">FusionCharts XT will load here!</div>
+      </div>
+      <div class="mt-5"></div>
       </div>
 
       <!-- Optional JavaScript -->
