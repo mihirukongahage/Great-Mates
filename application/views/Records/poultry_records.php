@@ -40,7 +40,13 @@
         width:60%;
         margin:auto;
     }
-
+    
+.btnAdd{
+    background-color: 	#106466;
+  }
+  .btnClear{
+    background-color: 	#106466;
+  }
 </style>
 
 
@@ -50,6 +56,7 @@
     <br>
       <h1>Monthly Records</h1>
       <h4 class="card-subtitle mb-2 text-muted">Poultry records for the month</h4>
+      <hr>
       <?php
         if (!empty($message)) {
           if ($message == "succsess") {
@@ -128,8 +135,8 @@
                                     <div class="addClearButtonContainer">
                                       <div class="text-center">
                                       <div class="row p-4">
-                                      <div class="addButton"> <button type="submit" name="insert" class="btn btn-primary " name="save">Add</button> </div>&nbsp
-                                      <div class="clearButton"> <button type="reset" name="insert" class="btn btn-primary " name="clear">Clear</button> </div>
+                                      <div class="addButton"> <button type="submit" name="insert" class="btn btn-primary btnAdd" name="save">Add</button> </div>&nbsp
+                                      <div class="clearButton"> <button type="reset" name="insert" class="btn btn-primary btnClear" name="clear">Clear</button> </div>
                                     <?php
                                         echo $this->session->flashdata("error"); 
                                     ?>

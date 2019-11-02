@@ -28,6 +28,9 @@
       color: 	#0b2829;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
+    .btnSelect{
+      background-color: 	#106466;
+    }
 </style>
   </head>
   <body>
@@ -37,7 +40,6 @@
       <h4 class="card-subtitle mb-2 text-muted"><?= date("Y")?></h4>
       <hr>
         <div class="section mt-5">
-        
  
               <div class="card card-plain w-75 p-1">
                 <div class="card-body">

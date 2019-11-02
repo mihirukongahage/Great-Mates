@@ -20,18 +20,13 @@
     .card-body {
       background-color: #DAAF8D;
     }
-
-
     body{
       background-image: url("./../../assets/img/background4.jpg");
     }
-
     .czard-body {
       color: #0b2829;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
-
-
     .formContainer {
       position: relative;
       top: 50px;
@@ -43,6 +38,12 @@
       left: 100px;
       top: 150px;
     }
+  .btnAdd{
+    background-color: 	#106466;
+  }
+  .btnClear{
+    background-color: 	#106466;
+  }
   </style>
 
 
@@ -54,6 +55,7 @@
     <br>
     <h1>Monthly Records</h1>
     <h4 class="card-subtitle mb-2 text-muted">Cattle records for the month</h4> 
+    <hr>
     <?php
     if (!empty($message)) {
       if ($message == "succsess") {
@@ -137,8 +139,8 @@
           <div class="addClearButtonContainer">
             <div class="text-center">
               <div class="row p-4">
-                <div class="addButton"> <button type="submit" name="insert" class="btn btn-primary " name="save">Add</button> </div>&nbsp
-                <div class="clearButton"> <button type="reset" name="insert" class="btn btn-primary " name="clear">Clear</button> </div>
+                <div class="addButton"> <button type="submit" name="insert" class="btn btn-primary btnAdd" name="save">Add</button> </div>&nbsp
+                <div class="clearButton"> <button type="reset" name="insert" class="btn btn-primary btnClear" name="clear">Clear</button> </div>
                 <?php
                 echo $this->session->flashdata("error");
                 ?>

@@ -61,8 +61,8 @@
         }
 
         ?>
-        <div class="section mt-5" style="margin-top:10px!important;">
-<div class="container" style="width:800px">
+        <div class="section" style="margin-top:10px!important;">
+          <div class="container mt-5" style="width:800px">
           <form action="<?= base_url('index.php/breedingController/write'); ?>" method="post">
             <div class="form-group">
               <label for="Farm_reg_no">Farm Registration Number</label>
@@ -130,8 +130,14 @@
               <!-- <span class="text-danger"><?php echo form_error('semen_code'); ?></span> -->
             </div>
 
-            <button type="submit" name="insert" class="btn btn-primary btnAdd" name="save">Add</button>
-            <div class="clearButton"> <button type="reset" name="insert" class="btn btn-primary btnClear" name="clear">Clear</button> </div>
+            <div class="section offset-1 mt-5">
+              <button type="submit" name="insert" class="btn btn-primary btnAdd" name="save">Add</button>
+              <div class="section offset-2">
+                <div class="clearButton"> <button type="reset" name="insert" class="btn btn-primary btnClear" name="clear">Clear</button> </div>
+              </div>
+              
+            </div>
+            
             <?php
             echo $this->session->flashdata("error");
             ?>

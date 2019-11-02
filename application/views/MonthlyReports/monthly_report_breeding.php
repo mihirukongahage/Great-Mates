@@ -43,13 +43,21 @@
     .button {
       display: inline-block;
     }
+    .table-head{
+       font-size: 15px;
+    }
+    .btnSelect{
+      background-color: 	#106466;
+    }
   </style>
 </head>
 
 <body>
 
   <div class="section offset-4 offset-sm-3 offset-md-3">
-    <h1>Artificial breeding report</h1>
+    <p>&nbsp;</p>
+    <h1>Artificial Breeding Report</h1>
+    <hr>
     <h4 class="card-subtitle mb-2 text-muted">  
     <div class="section mt-5">
 
@@ -73,7 +81,7 @@
               <div class="col-sm-3">
 
                 <label for="sel2">Select month:</label>
-                <select class="form-control" id="sel1" name="month">
+                <select class="form-control " id="sel1" name="month">
                   <option value="" selected disabled hidden>Choose here</option>
                   <option>January </option>
                   <option>February </option>
@@ -90,7 +98,7 @@
                 </select>
 
               </div>
-           <div class="col-sm-3">  <input type="submit" value="Select" class="button" style="margin-top: 34px;"></div>
+           <div class="col-sm-3">  <input type="submit" value="Select" class="btn btn-primary btnSelect" style="margin-top: 34px;"></div>
 
        </div>
           </div>
@@ -101,7 +109,7 @@
           <div class="table-responsive">
             <table class="table table-hover">
               <tbody>
-                <thead class="">
+                <thead class="table-head">
                   <tr>
                     <th>
                       Farm ID

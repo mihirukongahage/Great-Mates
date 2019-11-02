@@ -14,9 +14,6 @@
     .logo{
         width:25vw; 
     }
-    body{
-        background-image: url("./../../assets/img/background4.jpg");
-    }
     .card{
         background: rgba(11, 40, 41, 0.7);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
@@ -36,6 +33,9 @@
     }
     .text-danger{
         color: #ff726f !important
+    }
+    body{
+        background-image: url("./../../assets/img/background4.jpg");
     }
 
     </style>          
